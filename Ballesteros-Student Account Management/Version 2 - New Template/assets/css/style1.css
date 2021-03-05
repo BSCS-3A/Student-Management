@@ -281,7 +281,7 @@ nav ul ul ul li{
   .pagination > li.active > a, .pagination > li.active > span{background-color:#124254 !important}
 
   .modal-backdrop {
-      z-index: -1 ;
+      z-index: -1!important;
     }
 
     iframe
@@ -315,16 +315,16 @@ nav ul ul ul li{
     color: #fff ;
     margin: 0px;
     padding: 0px;
-    background: #5cb85c;
-    border-color: #5cb85c ;
+    background: #5cb85c!important;
+    border-color: #5cb85c!important;
     box-shadow:none ;
     }
     .btn-danger {
     color: #fff ;
     margin: 0px;
     padding: 0px;
-    background: #d9534f ;
-    border-color: #d9534f;
+    background: #d9534f!important;
+    border-color: #d9534f!important;
     box-shadow:none ;
     }
     .btn-button1{
@@ -334,7 +334,7 @@ nav ul ul ul li{
     border-color: #124254;
     box-shadow:none ; 
     padding: 10px 20px;
-    margin: 25px 5px 15px 0px ;      
+    margin: 25px 5px 15px 0px!important;      
     }
     .btn-button2{
       color: #eeeeee ;
@@ -344,7 +344,7 @@ nav ul ul ul li{
       border-color: #124254;
       box-shadow:none ; 
       padding: 10px 20px;
-      margin: 25px 0px 15px 0px ;      
+      margin: 25px 0px 15px 0px!important;      
       }    
    #save{
       color:#fff;
