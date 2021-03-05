@@ -258,7 +258,7 @@ nav ul ul ul li{
   }
   
 }
-  .header {
+  #myHeader {
     z-index: 100;
     padding: 2px 2px;
     background: #124254;
@@ -470,6 +470,7 @@ img.logos{
   padding: .5px;
   background-color: #124254;
   text-align: center;
+  z-index:999999;
 }
 div p.footer-txt{
   position: relative;
@@ -500,27 +501,28 @@ nav img.user-profile{
   ::-webkit-scrollbar-thumb {
     width: 1em;
     background-color: #ddd;
-    outline: 1px solid #124254;
+    outline: 1px solid black;
     border-radius: 1rem;
   }
   #top{
     border:none;
-    background-color: #124254;
+    background-color: #124254!important;
   }
   #receive{
-    background-color: #124254;
+    background-color: #124254!important;
   }
   .btn-link{
-    color: #124254;
-    font-size: 100%;
+    color: #124254!important;
+    font-size: 1.8rem!important;
   }
   #recent{
-    color: #124254;
+    color: #124254!important;
+    font-weight: bold;
   }
   
   .text-small {
     font-family: Roboto regular,sans-serif;
-    font-size: 0.9rem;
+    font-size: 1.3rem;
   }
   
   .messages-box,
@@ -534,6 +536,14 @@ nav img.user-profile{
   }
   
   input::placeholder {
-    font-size: 0.9rem;
+    font-size: 1.3rem;
     color: #999;
   }
+  .cname{
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 0;
+
+  }
+
+  

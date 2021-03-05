@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/img/buceils-logo.png">
+    <link rel="stylesheet" type="text/css" href="assets/css/style1.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/dataTables.bootstrap.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
+    <script src="assets/js/jquery-1.11.1.min.js"></script>
+    <script src="assets/js/jquery.dataTables.min.js"></script>
+    <script src="assets/js/dataTables.bootstrap.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script type="text/javascript"> (function() { var css = document.createElement('link'); css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
+    
+    <title> Vote Summary</title>
+</head>
+<body>
+    <nav>
+        <input id="nav-toggle" type="checkbox">
+        <div class="logo">
+            <h2>BUCEILS HS</h2>
+            <h3>ONLINE VOTING SYSTEM</h3>
+        </div>
+        <label for="btn" class="icon"><span class="fa fa-bars"></span></label>
+        <input type="checkbox" id="btn">
+        <ul>
+            <li>
+                <label for="btn-1" class="show">ACCOUNTS</label>
+                <a href="#">ACCOUNTS</a>
+                <input type="checkbox" id="btn-1">
+                <ul>
+                    <li><a href="important.html">Students</a></li>
+                    <li><a href="#">Admin</a></li>
+                </ul>
+            </li>
+            <li>
+                <label for="btn-2" class="show">ELECTION</label>
+                <a href="#">ELECTION</a>
+                <input type="checkbox" id="btn-2">
+                <ul>
+                    <li><a href="#">Archive</a></li>
+                    <li><a href="#">Vote Status</a></li>
+                    <li><a href="#">Vote Result</a>
+                        <ul>
+                            <li><a href="#">Make Report</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Configuration</a>
+                    
+                </ul>
+            </li>
+            <li><a href="#">CANDIDATES</a></li>
+            <li>
+                <label for="btn-4" class="show">LOGS</label>
+                <a href="#">LOGS</a>
+                <input type="checkbox" id="btn-4">
+                <ul>
+                    <li><a href="#">Access Log</a></li>
+                    <li><a href="#">Activity Log</a></li>
+                    <li><a href="#">Vote Summary</a></li>
+                </ul>
+            </li>
+            <li><a href="#">MESSAGES</a></li>
+            <li>
+                <label for="btn-5" class="show">Admin Name</label>
+                <a class="user" href="#"><img class="user-profile" src="assets/img/user.png"></a>
+                <input type="checkbox" id="btn-5">
+                <ul>
+                    <li><a class="username" href="#">Admin Name</a></li>
+                    <li class="logout">
+                        <span class="fa fa-sign-out"></span><a href="#">LOGOUT</a></span>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <!--end of list-->
+    </nav>
+    <div class="header" id="myHeader">
+        <h2>VOTE SUMMARY</h2>
+    </div>
+    <div class="container">
+       <section> <form method="get" action="file.doc">
+        <button class="btn btn-button1" type="submit" data-placement="top" data-toggle="tooltip" title="Print Vote Summary"><span class="fa fa-print"></span> PRINT SUMMARY</button>
+        
+     </form>        
+     </section>
+              <div class="row">
+              <div class="col-md-12">
+                  
+      <table class= "center" id="datatable" width="100%" cellspacing="0" cellpadding="0">
+                          <thead>
+                              <tr> 
+                                  <th class="text-center">STUDENT <span class="fa fa-info-circle" data-placement="top" data-toggle="tooltip" title="Student Name is encrypted for privacy purposes."></span></th>
+                                  <th class="text-center">PRESIDENT</th>
+                                  <th class="text-center">VICE PRESIDENT</th>
+                                  <th class="text-center">SECRETARY</th>    
+                                  <th class="text-center">TREASURER</th>
+                                  <th class="text-center">AUDITOR</th>
+                                  <th class="text-center">PEACE OFFICER</th>
+                                  <th class="text-center">PIO</th>
+                                  <th class="text-center">REPRESENTATIVE</th>    
+                              </tr>
+                          </thead> 
+     
+                          <tbody>
+                              <tr>
+                                  <td>dahxb1234</td>
+                                  <td>Pitt</td>
+                                  <td>Jolie</td>
+                                  <td>Depp</td>
+                                  <td>Smith</td>
+                                  <td>DiCaprio</td>
+                                  <td>Johnson</td>
+                                  <td>Cruise</td>
+                                  <td>Sandler</td>
+                              </tr>
+                              
+                                <tr>
+                                  <td>gshhs1553</td>
+                                  <td>Reynolds</td>
+                                  <td>Clooney</td>
+                                  <td>Johansson</td>
+                                  <td>Streep</td>
+                                  <td>Cooper</td>
+                                  <td>Carrey</td>
+                                  <td>Reeves</td>
+                                  <td>Chan</td>                                  
+                              </tr>
+
+                                  <tr>
+                                    <td>163gabx</td>
+                                    <td>Reynolds</td>
+                                    <td>Clooney</td>
+                                    <td>Johansson</td>
+                                    <td>Streep</td>
+                                    <td>Cooper</td>
+                                    <td>Carrey</td>
+                                    <td>Reeves</td>
+                                    <td>Chan</td>                                
+                              </tr>
+                               <tr>
+                                    <td>saha236</td>
+                                    <td>Pitt</td>
+                                    <td>Jolie</td>
+                                    <td>Depp</td>
+                                    <td>Smith</td>
+                                    <td>DiCaprio</td>
+                                    <td>Johnson</td>
+                                    <td>Cruise</td>
+                                    <td>Sandler</td>                                  
+                              </tr>
+
+                               <tr>
+                                    <td>163hscb</td>
+                                    <td>Reynolds</td>
+                                    <td>Clooney</td>
+                                    <td>Johansson</td>
+                                    <td>Streep</td>
+                                    <td>Cooper</td>
+                                    <td>Carrey</td>
+                                    <td>Reeves</td>
+                                    <td>Chan</td>
+                               </tr>  
+                                  <tr>
+                                    <td>nsjsj124</td>
+                                    <td>Reynolds</td>
+                                    <td>Clooney</td>
+                                    <td>Johansson</td>
+                                    <td>Streep</td>
+                                    <td>Cooper</td>
+                                    <td>Carrey</td>
+                                    <td>Reeves</td>
+                                    <td>Chan</td>
+                                  
+                              </tr>
+                                    <td>1dcbj6668</td>
+                                    <td>Reynolds</td>
+                                    <td>Clooney</td>
+                                    <td>Johansson</td>
+                                    <td>Streep</td>
+                                    <td>Cooper</td>
+                                    <td>Carrey</td>
+                                    <td>Reeves</td>
+                                    <td>Chan</td>
+                                  
+                              </tr>
+                                  <tr>
+                                    <td>chsbc12364</td>
+                                    <td>Pitt</td>
+                                    <td>Jolie</td>
+                                    <td>Depp</td>
+                                    <td>Smith</td>
+                                    <td>DiCaprio</td>
+                                    <td>Johnson</td>
+                                    <td>Cruise</td>
+                                    <td>Sandler</td>
+                                  
+                              </tr>
+                                  <tr>
+                                    <td>53yd7</td>
+                                    <td>Pitt</td>
+                                    <td>Jolie</td>
+                                    <td>Depp</td>
+                                    <td>Smith</td>
+                                    <td>DiCaprio</td>
+                                    <td>Johnson</td>
+                                    <td>Cruise</td>
+                                    <td>Sandler</td>
+                                  
+                              </tr>
+                                  <tr>
+                                    <td>jcsnfhw272</td>
+                                    <td>Pitt</td>
+                                    <td>Jolie</td>
+                                    <td>Depp</td>
+                                    <td>Smith</td>
+                                    <td>DiCaprio</td>
+                                    <td>Johnson</td>
+                                    <td>Cruise</td>
+                                    <td>Sandler</td>
+                                  
+                              </tr>
+                                  <tr>
+                                    <td>hsbhsf657</td>
+                                    <td>Pitt</td>
+                                    <td>Jolie</td>
+                                    <td>Depp</td>
+                                    <td>Smith</td>
+                                    <td>DiCaprio</td>
+                                    <td>Johnson</td>
+                                    <td>Cruise</td>
+                                    <td>Sandler</td>
+                                  
+                              </tr>
+                                  <tr>
+                                    <td>6ehwfhr78</td>
+                                    <td>Pitt</td>
+                                    <td>Jolie</td>
+                                    <td>Depp</td>
+                                    <td>Smith</td>
+                                    <td>DiCaprio</td>
+                                    <td>Johnson</td>
+                                    <td>Cruise</td>
+                                    <td>Sandler</td>                                  
+                                  
+                              </tr>
+                                  <tr>
+                                    <td>62egdgyf</td>
+                                    <td>Pitt</td>
+                                    <td>Jolie</td>
+                                    <td>Depp</td>
+                                    <td>Smith</td>
+                                    <td>DiCaprio</td>
+                                    <td>Johnson</td>
+                                    <td>Cruise</td>
+                                    <td>Sandler</td>
+                                  
+                              </tr>
+                                  <tr>
+                                    <td>67rfbcfdhf</td>
+                                    <td>Pitt</td>
+                                    <td>Jolie</td>
+                                    <td>Depp</td>
+                                    <td>Smith</td>
+                                    <td>DiCaprio</td>
+                                    <td>Johnson</td>
+                                    <td>Cruise</td>
+                                    <td>Sandler</td>
+                                  
+                              </tr>
+                                  <tr>
+                                    <td>67rhcbvb</td>
+                                    <td>Pitt</td>
+                                    <td>Jolie</td>
+                                    <td>Depp</td>
+                                    <td>Smith</td>
+                                    <td>DiCaprio</td>
+                                    <td>Johnson</td>
+                                    <td>Cruise</td>
+                                    <td>Sandler</td>
+                                  
+                              </tr>
+                                  <tr>
+                                    <td>jhvndhf677</td>
+                                    <td>Pitt</td>
+                                    <td>Jolie</td>
+                                    <td>Depp</td>
+                                    <td>Smith</td>
+                                    <td>DiCaprio</td>
+                                    <td>Johnson</td>
+                                    <td>Cruise</td>
+                                    <td>Sandler</td>
+                                  
+                              </tr>
+                                  <tr>
+                                    <td>cbvs46</td>
+                                    <td>Pitt</td>
+                                    <td>Jolie</td>
+                                    <td>Depp</td>
+                                    <td>Smith</td>
+                                    <td>DiCaprio</td>
+                                    <td>Johnson</td>
+                                    <td>Cruise</td>
+                                    <td>Sandler</td>
+                                  
+                              </tr>
+                                  <tr>
+                                    <td>hdnvndv74</td>
+                                    <td>Reynolds</td>
+                                    <td>Clooney</td>
+                                    <td>Johansson</td>
+                                    <td>Streep</td>
+                                    <td>Cooper</td>
+                                    <td>Carrey</td>
+                                    <td>Reeves</td>
+                                    <td>Chan</td>
+                                  
+                              </tr>
+                                  <tr>
+                                    <td>njvdnvhd4</td>
+                                    <td>Reynolds</td>
+                                    <td>Clooney</td>
+                                    <td>Johansson</td>
+                                    <td>Streep</td>
+                                    <td>Cooper</td>
+                                    <td>Carrey</td>
+                                    <td>Reeves</td>
+                                    <td>Chan</td>
+                                  
+                              </tr>
+                                  <tr>
+                                    <td>vndmvs7</td>
+                                    <td>Reynolds</td>
+                                    <td>Clooney</td>
+                                    <td>Johansson</td>
+                                    <td>Streep</td>
+                                    <td>Cooper</td>
+                                    <td>Carrey</td>
+                                    <td>Reeves</td>
+                                    <td>Chan</td>
+                                  
+                              </tr>
+                                  <tr>
+                                    <td>kvdnmsjh7</td>
+                                    <td>Reynolds</td>
+                                    <td>Clooney</td>
+                                    <td>Johansson</td>
+                                    <td>Streep</td>
+                                    <td>Cooper</td>
+                                    <td>Carrey</td>
+                                    <td>Reeves</td>
+                                    <td>Chan</td>
+                                  
+                              </tr>
+                                  <tr>
+                                    <td>dfjfd5</td>
+                                    <td>Reynolds</td>
+                                    <td>Clooney</td>
+                                    <td>Johansson</td>
+                                    <td>Streep</td>
+                                    <td>Cooper</td>
+                                    <td>Carrey</td>
+                                    <td>Reeves</td>
+                                    <td>Chan</td>
+                                  
+                              </tr>
+                                  <tr>
+                                    <td>jcnsncsjc7</td>
+                                    <td>Reynolds</td>
+                                    <td>Clooney</td>
+                                    <td>Johansson</td>
+                                    <td>Streep</td>
+                                    <td>Cooper</td>
+                                    <td>Carrey</td>
+                                    <td>Reeves</td>
+                                    <td>Chan</td>
+                                  
+                              </tr>
+                                  <tr>
+                                    <td>nndhhsd7</td>
+                                    <td>Reynolds</td>
+                                    <td>Clooney</td>
+                                    <td>Johansson</td>
+                                    <td>Streep</td>
+                                    <td>Cooper</td>
+                                    <td>Carrey</td>
+                                    <td>Reeves</td>
+                                    <td>Chan</td>
+                                  
+                              </tr>
+                                  <tr>
+                                    <td>jkdjf7327r</td>
+                                    <td>Reynolds</td>
+                                    <td>Clooney</td>
+                                    <td>Johansson</td>
+                                    <td>Streep</td>
+                                    <td>Cooper</td>
+                                    <td>Carrey</td>
+                                    <td>Reeves</td>
+                                    <td>Chan</td>
+                                  
+                              </tr>
+                                  <tr>
+                                    <td>jnvdnsh762</td>
+                                    <td>Reynolds</td>
+                                    <td>Clooney</td>
+                                    <td>Johansson</td>
+                                    <td>Streep</td>
+                                    <td>Cooper</td>
+                                    <td>Carrey</td>
+                                    <td>Reeves</td>
+                                    <td>Chan</td>
+                                  
+                              </tr>
+
+                          </tbody>
+                      </table>
+          </div>
+          </div>
+      </div>
+    </div>
+    <div class="modal fade" id="new" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+        <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title custom_align" id="Heading">Import new list?</h4>
+      <div class="modal-footer ">
+      <button type="button" class="btn btn-success" id="go" ><span class="glyphicon glyphicon-ok-sign"></span> Continue</button>
+      <button type="button" class="btn btn-default" id= "cancel2" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+    </div>
+      </div>
+    </div>
+    <!-- /.modal-content --> 
+    </div>
+    <!-- /.modal-dialog --> 
+  </div>
+
+
+  <div class="footer">
+    <p class="footer-txt">BS COMPUTER SCIENCE 3A © 2021</p>
+</div>
+
+        </script>
+    <script>$(document).ready(function() {
+        $('#datatable').DataTable( {
+        "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]
+        } );
+        $("[data-toggle=tooltip]").tooltip();
+        } );</script>
+    
+</body>
+
+</html>
