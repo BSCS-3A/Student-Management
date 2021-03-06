@@ -1,0 +1,531 @@
+*{
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+  list-style: none;  
+}
+body{  
+  font-family: Roboto,Roboto Thin,Generica, sans-serif;  
+  background-image: url("../img/studentBG.png");
+  background-size: cover;
+  font-size: 100%;
+  background-attachment: fixed;
+  width: auto;
+  height: 100%;
+}
+nav{
+  background: #f8f8f8;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .15 ),
+              0 3px 6px rgba(0, 0, 0, .23);
+  width: auto;
+  z-index: 3;
+}
+nav:after{
+  content: '';
+  clear: both;
+  display: table;
+}
+nav h2{
+  font-family: Roboto Regular, sans-serif;
+  font-weight: inherit;
+  font-size: 140%;
+  margin-bottom: 0px;
+  letter-spacing: 6px;
+  color: #124254;
+}
+nav h3{
+  margin-top: 0px;
+  color: #124254;
+  padding-top: 5px;
+  font-weight: inherit;
+  font-size: 170%;
+  margin-bottom: 0px;
+  letter-spacing: 6px;
+  font-family: Generica regular, sans-serif;
+}
+nav .Alogo{
+  float: left;
+  position: relative;
+  line-height: 80px;
+  margin-top: 5px;
+  margin-left: 40px;
+}
+nav ul{
+  float: right;
+  padding: 0;
+  height: 80px;
+  /* margin-right: 40px; */
+  margin-bottom: 0;
+  list-style: none;
+  position: relative;
+  text-align: center;
+  z-index: 4;
+}
+nav ul li{
+  float: left;
+  display: inline-block;
+  height: 80px;
+  background: #f8f8f8;
+  text-align: center;
+  /* margin: 0 5px; */
+  width: 150px;
+}
+nav ul li a{
+  color: black;
+  line-height: 70px;
+  text-decoration: none;
+  font-size: 1.6em;
+  padding: 8px 15px;
+  letter-spacing: 1px;
+  font-family: Roboto Light, sans-serif;
+}
+nav ul li a:visited {
+  color: black;
+  text-decoration: none;
+}
+nav ul li a:hover{
+  color: black;
+  text-decoration: none;
+}
+nav ul li a:active{
+  text-decoration: none;
+}
+nav ul li:hover{
+  background-color: #fece4b;
+}
+nav ul li a:active {
+  color: green;
+}
+nav ul ul{
+  position: absolute;
+  top: 90px;
+  border-top: 3px solid #18566e;
+  opacity: 0;
+  visibility: hidden;
+  transition: top .3s;
+}
+nav ul ul li{
+ height: 50px;
+ position: relative;
+ margin: 0px;
+ float: none;
+ display: list-item;
+}
+nav ul ul li a{
+  line-height: 50px;
+}
+nav ul ul li a.Aelec-text{
+  font-size: 1.2em;
+}
+nav ul ul li .logout::before {
+  content: "\f2f5";
+  font-family: "Font Awesome 5 Free";
+  padding: 0 10px 0 0;
+}
+nav ul ul li a:link{
+  color:rgb(0, 0, 0);
+}
+nav ul ul li a:visited {
+  color: white;
+  text-decoration: none;
+}
+nav ul ul li a:hover{
+  color: white;
+  box-shadow: none;
+  text-decoration: none;
+}
+nav ul ul li:hover{
+  background-color: #124254;
+  text-decoration: none;
+}
+nav ul ul li a:active{
+  color: #1b1b1b;
+  box-shadow: none;
+  text-decoration: none;
+}
+nav ul ul ul{
+  border-top: none;
+}
+nav ul ul ul li{
+  position: relative;
+  top: -60px;
+  left: 150px;
+}
+nav ul li:hover > ul{
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+nav ul ul li{
+  background: #18566e;
+  position: relative;
+  margin: 0px;
+  width: 150px;
+  font-size: 0.8em;
+  float: none;
+  display: list-item;
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+  z-index: 1;
+}
+nav ul ul li a{
+  color: black;
+  line-height: 50px;
+  font-family: Roboto bold, sans-serif;
+}
+nav ul ul ul li{
+  position: relative;
+  font-size: 1em;
+  top: -60px;
+  left: 150px;
+}
+.Ashow,.Aicon,input{
+  display: none;
+}
+nav img.Auser-profile{
+  margin-top: 0;
+  height: 40px;
+  width: 40px;
+}
+/* .fa-plus{
+  font-size: 15px;
+  margin-left: 40px;
+} */
+
+@media all and (max-width: 968px) {
+  nav ul{
+    margin-right: 0px;
+    margin-left: 0px;
+    float: left;
+  }
+  /* nav .logo{
+    padding-left: 30px;
+    width: auto;
+    float: left;
+  } */
+  .Ashow + a, ul{
+    display: none;
+  }
+  nav ul li,nav ul ul li{
+    border-top: 3px solid #18566e;
+    display: block;
+    width: 100%;
+  }
+  nav ul li a:hover{
+    box-shadow: none;
+  }
+  .Ashow{
+    display: block;
+    background-color: #18566e;
+    color: white;
+    font-size: 1.2em;
+    padding: 0 20px;
+    line-height: 70px;
+    cursor: pointer;
+  }
+  .Ashow:hover{
+    color:white;
+  }
+  .Aicon{
+    display: block;
+    color:  black;
+    position: absolute;
+    top: 0;
+    right: 40px;
+    line-height: 70px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  nav ul ul{
+    top: 70px;
+    border-top: 0px;
+    border-bottom: 0px;
+    float: none;
+    position: static;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+  }
+  nav ul ul a{
+    left: 0;
+  }
+  /* nav ul ul ul a{
+    padding-left: 80px;
+  }
+  nav ul ul ul li{
+    position: static;
+  } */
+  [id^=btn]:checked + ul{
+    width: 100%;
+    left: 0;
+    display: block;
+  }
+  nav ul ul li{
+    border-top: 0px;
+    border-bottom: 0px;
+  }
+  span.cancel:before{
+    content: '\f00d';
+  }
+  
+}
+header{
+  font-size: 35px;
+  font-weight: 600;
+  padding: 10px 0;
+}
+p{
+  font-size: 30px;
+  font-weight: 500;
+  font-family: Generica regular, sans-serif;
+}
+article p{
+  font-family: Roboto regular, sans-serif;
+  color: #124254;
+  font-weight: inherit;
+  font-size: 20px;
+  letter-spacing: 3px;
+  position: relative;
+}
+article h1{
+  font-family: Generica regular, sans-serif;
+  color: #18566e;
+  font-weight: inherit;
+  font-size: 55px;
+  position: relative;
+  letter-spacing: 3px;
+  margin-top: 10px;
+}
+/* Container for flexboxes */
+section {
+  display: -webkit-flex;
+  display: flex;
+  margin-left: 30px;
+  margin-top: 100px;
+  max-width: 800px;
+  float: left;
+}
+/* Style the content */
+article {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  padding: 10px;
+}
+/*For logos on top of welcome banner*/
+img.Alogos{
+  float: left;
+  padding-left: 10px;
+  height: 90px;
+  width: 100px;
+  margin-bottom: 2em;
+}
+.Alogo-container{
+  position:relative;
+  /* float: left; */
+  display: -webkit-flex;
+  display: flex;
+  margin-left: 0px;
+  margin-top: 0px;
+  max-width: 700px;
+} 
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  body, section, .Acontainer {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+
+
+
+
+/*countdown*/
+aside{
+  color: #333;
+  float: left;
+  text-align: center;
+  margin-left: 50px;
+  top: 50px;
+  bottom: 0;
+  position: relative;
+  max-width: 500px;
+
+}
+div h1 {
+  font-weight: normal;
+  letter-spacing: .125rem;
+  text-transform: uppercase;
+  font-size: 4em;
+  color: black;
+  margin-bottom: .8em;
+}
+div ul{
+  /* max-width: 90%; */
+  border: 1px solid #ffc423;
+  border-width: 3px;
+  text-align: center;
+  padding: 0;
+}
+div li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+  color: black;
+}
+div li span {
+  display: block;
+  font-size: 4.5rem;
+
+}
+aside p.Aelec-guide-txt{
+  font-family: Roboto Regular, sans-serif;
+  text-align: justify;
+  font-size: 1.6em;
+  margin-top: 3em;
+}
+
+
+#aside-container{
+  min-height: 100%;
+  overflow: auto;
+  padding-bottom: 5%;
+}
+#section-container{
+  min-height: 100%;
+  overflow: auto;
+  padding-bottom: 5%;
+}
+
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  padding: .5px;
+  background-color: #fece4b;
+  text-align: center;
+  z-index:999999;
+}
+div p.footer-txt{
+  position: relative;
+  top: .5em;
+  font-family: Roboto Regular, sans-serif;
+  letter-spacing: 7px;
+  font-size: 1em;
+  color: #ffffff;
+}
+
+
+
+/*Student Message Box*/
+.cheader{
+  z-index: 100;
+  padding: 2px 2px;
+  background: #fece4b;
+  color: #f1f1f1;
+  font-weight: 400;
+  width: 100%;
+  text-align: center;
+  font-family: Roboto Regular, sans-serif;
+  letter-spacing: 6px;
+}
+.ccontainer{
+  background-color:#dddddd;
+  margin: 30px 100px 25px 100px;
+  border: 2px solid #fece4b;
+}
+
+.inbox_msg {
+	border: 1px solid #c4c4c4;
+	clear: both;
+	overflow: hidden;
+		}
+  .top_spac{ margin: 20px 0 0;}
+  .inbox_chat { height: 550px; overflow-y: scroll;}
+  .active_chat{ background:#ebebeb;}
+
+  .incoming_msg_img {
+	display: inline-block;
+	width: 6%;
+  }
+	.received_msg {
+	display: inline-block;
+	padding: 0 0 0 10px;
+	vertical-align: top;
+	width: 92%;
+	}
+	.received_withd_msg p {
+	background: #fff192 none repeat scroll 0 0;
+	border-radius: 3px;
+	color: #3b444b;
+  font-family: Roboto regular,sans-serif;
+	font-size: 14px;
+	margin: 0;
+	padding: 5px 10px 5px 12px;
+	width: 100%;
+	}
+	.time_date {
+	color: #3b444b;
+	display: block;
+	font-size: 10px;
+	margin: 3px 0 0;
+  font-family: Roboto regular,sans-serif;
+		}
+	.received_withd_msg { width: 70%;}
+	.mesgs {
+	float: left;
+	padding: 40px;
+	}
+
+	.sent_msg p {
+	background: #fece4b none repeat scroll 0 0;
+  font-family: Roboto regular,sans-serif;
+	border-radius: 3px;
+	font-size: 14px;
+	margin: 0;
+  color:#3b444b;
+	padding: 5px 10px 5px 12px;
+	width:100%;
+		}
+	.outgoing_msg{ overflow:hidden; margin:26px 20px 26px 30px;}
+	.sent_msg {
+  float: right;
+	width: 70%;
+  text-align: right;
+	}
+		.input_msg_write input {
+		  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+		  border: medium none;
+		  color: #4c4c4c;
+		  font-size: 15px;
+		  min-height: 48px;
+		  width: 100%;
+		}
+
+		.type_msg {border-top: 1px solid #c4c4c4;position: relative; margin-top: 20px;}
+		.msg_send_btn {
+		  background: #fece4b none repeat scroll 0 0;
+		  border: medium none;
+		  border-radius: 50%;
+		  color: #ffff99;
+		  cursor: pointer;
+		  font-size: 17px;
+		  height: 33px;
+		  position: absolute;
+		  right: 0;
+		  top: 1px;
+		  width: 33px;
+		}
+		.messaging { background: #fff;}
+		.msg_history {
+		  max-height: 300px;
+		  overflow-y: auto;
+		}
+
+
