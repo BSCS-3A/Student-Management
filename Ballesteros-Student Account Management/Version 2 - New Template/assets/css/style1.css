@@ -39,17 +39,19 @@ nav h3{
   color: #ffffff;
   padding-top: 5px;
   font-weight: inherit;
-  font-size: 100%;
+  font-size: 120%;
   margin-bottom: 0px;
   letter-spacing: 6px;
   font-family: Generica regular, sans-serif;
 }
+
 nav .logo{
   float: left;
   position: relative;
   line-height: 80px;
   margin-top: 5px;
   margin-left: 40px;
+  color:#ffffff;
 }
 nav ul{
   float: right;
@@ -75,7 +77,7 @@ nav ul li a{
   color: rgb(255, 255, 255);
   line-height: 70px;
   text-decoration: none;
-  font-size: 130%;
+  font-size: 1.2em;
   padding: 8px 15px;
   letter-spacing: 1px;
   font-family: Roboto Light, sans-serif;
@@ -258,17 +260,44 @@ nav ul ul ul li{
   }
   
 }
+/*ballesteros*/
+nav h4{
+  font-family: Roboto Regular, sans-serif;
+  font-weight: inherit;
+  font-size: 100%;
+  margin-bottom: 0px;
+  letter-spacing: 6px;
+  color: #ffffff;
+  padding-top: 15px;
+  font-size:15px;
+}
+nav h5{
+  font-size: 20px;
+  margin-top: 0px;
+  color: #ffffff;
+  padding-top: 5px;
+  font-weight: inherit;
+  font-size: 100%;
+  margin-bottom: 0px;
+  letter-spacing: 6px;
+  font-family: Generica regular, sans-serif;
+}
+.cnavie ul li a{
+  font-size: 1.05em;
+
+}
   .cheader {
     z-index: 100;
     padding: 1px 1px;
+    font-size: 35px;
     background: #124254;
     color: #f1f1f1;
-    font-weight: 400;
     width: 100%;
     text-align: center;
     font-family: Roboto Regular, sans-serif;
     letter-spacing: 6px;
   }
+  
   
   .pagination>li {
     display: inline;
@@ -467,7 +496,7 @@ img.logos{
   bottom: 0;
   width: 100%;
   height: auto;
-  padding: .5px;
+  padding: .4px;
   background-color: #124254;
   text-align: center;
   z-index:999999;
@@ -477,13 +506,21 @@ div p.footer-txt{
   top: .5em;
   font-family: Roboto Regular, sans-serif;
   letter-spacing: 7px;
-  font-size: 1em;
+  font-size: 0.7em;
   color: #ffffff;
 }
 nav img.user-profile{
   margin-top: 0;
   height: 40px;
   width: 40px;
+}
+.ccheader {
+  padding: 15px 0 3px 0;
+  color: #f1f1f1;
+  background-color: #124254;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 7px;
 }
 
 
@@ -513,7 +550,7 @@ nav img.user-profile{
   }
   .btn-link{
     color: #124254!important;
-    font-size: 1.8rem!important;
+    font-size: 1.0rem!important;
   }
   #recent{
     color: #124254!important;
@@ -522,12 +559,12 @@ nav img.user-profile{
   
   .text-small {
     font-family: Roboto regular,sans-serif;
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
   
   .messages-box,
   .chat-box {
-    height: 490px;
+    height: 390px;
     overflow-y: scroll;
   }
   
@@ -536,14 +573,17 @@ nav img.user-profile{
   }
   
   input::placeholder {
-    font-size: 1.3rem;
+    font-size: 1.0rem;
     color: #999;
   }
   .cname{
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 1rem;
     margin-bottom: 0;
 
   }
+.cmessage{
+  font-size: 0.9rem;
+}
 
   

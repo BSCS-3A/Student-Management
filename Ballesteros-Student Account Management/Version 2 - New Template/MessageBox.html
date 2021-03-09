@@ -4,9 +4,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta charset="utf-8">
+    <meta name="HandheldFriendly" content="true">
     <link rel="icon" href="assets/img/buceils-logo.png">
     <link rel="stylesheet" type="text/css" href="assets/css/style1.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap4.3.1.min.css">
     <script src="assets/js/jquery-3.3.1.slim.min.js"></script>
@@ -15,78 +15,78 @@
     <script type="text/javascript"> (function() { var css = document.createElement('link'); css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
     <title> Message Box</title>
 </head>
-  <body>
-    <nav>
-      <input id="nav-toggle" type="checkbox">
-      <div class="logo">
-          <h2>BUCEILS HS</h2>
-          <h3>ONLINE VOTING SYSTEM</h3>
-      </div>
-      <label for="btn" class="icon"><span class="fa fa-bars"></span></label>
-      <input type="checkbox" id="btn">
-      <ul>
-          <li>
-              <label for="btn-1" class="show">ACCOUNTS</label>
-              <a href="#">ACCOUNTS</a>
-              <input type="checkbox" id="btn-1">
-              <ul>
-                  <li><a href="important.html">Students</a></li>
-                  <li><a href="#">Admin</a></li>
-              </ul>
-          </li>
-          <li>
-              <label for="btn-2" class="show">ELECTION</label>
-              <a href="#">ELECTION</a>
-              <input type="checkbox" id="btn-2">
-              <ul>
-                  <li><a href="#">Archive</a></li>
-                  <li><a href="#">Vote Status</a></li>
-                  <li><a href="#">Vote Result</a>
-                      <ul>
-                          <li><a href="#">Make Report</a></li>
-                      </ul>
-                  </li>
-                  <li><a href="#">Configuration</a>
-                  
-              </ul>
-          </li>
-          <li><a href="#">CANDIDATES</a></li>
-          <li>
-              <label for="btn-4" class="show">LOGS</label>
-              <a href="#">LOGS</a>
-              <input type="checkbox" id="btn-4">
-              <ul>
-                  <li><a href="#">Access Log</a></li>
-                  <li><a href="#">Activity Log</a></li>
-                  <li><a href="#">Vote Summary</a></li>
-              </ul>
-          </li>
-          <li><a href="#">MESSAGES</a></li>
-          <li>
-              <label for="btn-5" class="show">Admin Name</label>
-              <a class="user" href="#"><img class="user-profile" src="assets/img/user.png"></a>
-              <input type="checkbox" id="btn-5">
-              <ul>
-                  <li><a class="username" href="#">Admin Name</a></li>
-                  <li class="logout">
-                      <span class="fa fa-sign-out"></span><a href="#">LOGOUT</a></span>
-                  </li>
-              </ul>
-          </li>
-      </ul>
-      <!--end of list-->
-  </nav>
-  <div class="header" id="myHeader">
-      <h2>MESSAGE BOX</h2>
-  </div>
-  <div class="container" >  
+<body>
+    <nav class="cnavie">
+        <input id="nav-toggle" type="checkbox">
+        <div class="logo">
+            <h4>BUCEILS HS</h4>
+            <h5>ONLINE VOTING SYSTEM</h5>
+        </div>
+        <label for="btn" class="icon"><span class="fa fa-bars"></span></label>
+        <input type="checkbox" id="btn">
+        <ul>
+            <li>
+                <label for="btn-1" class="show">ACCOUNTS</label>
+                <a href="#">ACCOUNTS</a>
+                <input type="checkbox" id="btn-1">
+                <ul>
+                    <li><a href="#">Students</a></li>
+                    <li><a href="#">Admin</a></li>
+                </ul>
+            </li>
+            <li>
+                <label for="btn-2" class="show">ELECTION</label>
+                <a href="#">ELECTION</a>
+                <input type="checkbox" id="btn-2">
+                <ul>
+                    <li><a href="#">Archive</a></li>
+                    <li><a href="#">Vote Status</a></li>
+                    <li><a href="#">Vote Result</a>
+                        <ul>
+                            <li><a href="#">Make Report</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Configuration</a>
+                    
+                </ul>
+            </li>
+            <li><a href="#">CANDIDATES</a></li>
+            <li>
+                <label for="btn-4" class="show">LOGS</label>
+                <a href="#">LOGS</a>
+                <input type="checkbox" id="btn-4">
+                <ul>
+                    <li><a href="#">Access Log</a></li>
+                    <li><a href="#">Activity Log</a></li>
+                    <li><a href="#">Vote Summary</a></li>
+                </ul>
+            </li>
+            <li><a href="#">MESSAGES</a></li>
+            <li>
+                <label for="btn-5" class="show">Admin Name</label>
+                <a class="user" href="#"><img class="user-profile" src="assets/img/user.png"></a>
+                <input type="checkbox" id="btn-5">
+                <ul>
+                    <li><a class="username" href="#">Admin Name</a></li>
+                    <li class="logout">
+                        <span class="fa fa-sign-out"></span><a href="#">LOGOUT</a></span>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <!--end of list-->
+    </nav>
+  <div class="ccheader">
+    <h3>MESSAGE BOX</h3>
+</div>
+  <div class="container">  
     <div class="row rounded-lg overflow-hidden shadow">
       <!-- Users box-->
       <div class="col-5 px-0">
         <div class="bg-white">
   
           <div class="bg-gray px-4 py-1 bg-light" id="recent">
-            <p class="h2 mt-1 mb-0 py-0">Recent</p>
+            <p class="h5 mb-0 py-2">Recent</p>
           </div>
   
           <div class="messages-box">
@@ -96,7 +96,7 @@
                     <div class="d-flex align-items-center justify-content-between mb-1">
                       <p class="cname">Lorem Ipsum</p><small class="small font-weight-bold">13 Aug</small>
                     </div>
-                    <p class="mb-0 text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>                    
+                    <p class="cmessage">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>                    
                 </div>
               </a>
   
@@ -105,7 +105,7 @@
                     <div class="d-flex align-items-center justify-content-between mb-1">
                       <p class="cname">Lorem Ipsum</p><small class="small font-weight-bold">13 Aug</small>
                     </div>
-                    <p class="text-muted mb-0 text-small">Lorem ipsum dolor sit amet, consectetur. incididunt ut labore.</p>                    
+                    <p class="cmessage">Lorem ipsum dolor sit amet, consectetur. incididunt ut labore.</p>                    
                 </div>
               </a>
   
@@ -114,7 +114,7 @@
                     <div class="d-flex align-items-center justify-content-between mb-1">
                       <p class="cname">Lorem Ipsum</p><small class="small font-weight-bold">13 Aug</small>
                     </div>
-                    <p class="text-muted mb-0 text-small">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>                    
+                    <p class="cmessage">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>                    
                 </div>
               </a>
   
@@ -123,7 +123,7 @@
                     <div class="d-flex align-items-center justify-content-between mb-1">
                       <p class="cname">Lorem Ipsum</p><small class="small font-weight-bold">13 Aug</small>
                     </div>
-                    <p class="text-muted mb-0 text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>                    
+                    <p class="cmessage">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>                    
                 </div>
               </a>
   
@@ -132,7 +132,7 @@
                     <div class="d-flex align-items-center justify-content-between mb-1">
                       <p class="cname">Lorem Ipsum</p><small class="small font-weight-bold">13 Aug</small>
                     </div>
-                    <p class="text-muted mb-0 text-small">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                    <p class="cmessage">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
                   
                 </div>
               </a>
@@ -142,7 +142,7 @@
                     <div class="d-flex align-items-center justify-content-between mb-1">
                       <p class="cname">Lorem Ipsum</p><small class="small font-weight-bold">13 Aug</small>
                     </div>
-                    <p class="text-muted mb-0 text-small">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p class="cmessage">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                   
                 </div>
               </a>
@@ -152,7 +152,7 @@
                     <div class="d-flex align-items-center justify-content-between mb-1">
                       <p class="cname">Lorem Ipsum</p><small class="small font-weight-bold">13 Aug</small>
                     </div>
-                    <p class="text-muted mb-0 text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>                    
+                    <p class="cmessage">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>                    
                 </div>
               </a>
 
@@ -161,7 +161,7 @@
                   <div class="d-flex align-items-center justify-content-between mb-1">
                     <p class="cname">Lorem Ipsum</p><small class="small font-weight-bold">13 Aug</small>
                   </div>
-                  <p class="text-muted mb-0 text-small">Lorem ipsum dolor sit amet, consectetur. incididunt ut labore.</p>                    
+                  <p class="cmessage">Lorem ipsum dolor sit amet, consectetur. incididunt ut labore.</p>                    
               </div>
             </a>
 
@@ -170,7 +170,7 @@
                   <div class="d-flex align-items-center justify-content-between mb-1">
                     <p class="cname">Lorem Ipsum</p><small class="small font-weight-bold">13 Aug</small>
                   </div>
-                  <p class="text-muted mb-0 text-small">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>                    
+                  <p class="cmessage">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>                    
               </div>
             </a>
 
@@ -179,7 +179,7 @@
                   <div class="d-flex align-items-center justify-content-between mb-1">
                     <p class="cname">Lorem Ipsum</p><small class="small font-weight-bold">13 Aug</small>
                   </div>
-                  <p class="text-muted mb-0 text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>                    
+                  <p class="cmessage">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>                    
               </div>
             </a>
 
@@ -188,7 +188,7 @@
                   <div class="d-flex align-items-center justify-content-between mb-1">
                     <p class="cname">Lorem Ipsum</p><small class="small font-weight-bold">13 Aug</small>
                   </div>
-                  <p class="text-muted mb-0 text-small">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                  <p class="cmessage">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
                 
               </div>
             </a>
@@ -198,7 +198,7 @@
                   <div class="d-flex align-items-center justify-content-between mb-1">
                     <p class="cname">Lorem Ipsum</p><small class="small font-weight-bold">13 Aug</small>
                   </div>
-                  <p class="text-muted mb-0 text-small">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                  <p class="cmessage">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 
               </div>
             </a>
@@ -208,7 +208,7 @@
                   <div class="d-flex align-items-center justify-content-between mb-1">
                     <p class="cname">Lorem Ipsum</p><small class="small font-weight-bold">13 Aug</small>
                   </div>
-                  <p class="text-muted mb-0 text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>                    
+                  <p class="cmessage">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>                    
               </div>
             </a>               
   
@@ -217,7 +217,7 @@
                     <div class="d-flex align-items-center justify-content-between mb-3">
                       <p class="cname">Lorem Ipsum</p><small class="small font-weight-bold">13 Aug</small>
                     </div>
-                    <p class="text-muted mb-0 text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>                    
+                    <p class="cmessage">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>                    
                 </div>
               </a>
   
