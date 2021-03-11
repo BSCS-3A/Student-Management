@@ -440,6 +440,16 @@ div p.footer-txt{
   margin: 30px 100px 25px 100px;
   border: 2px solid #fece4b;
 }
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .ccontainer {margin: 0px 0px 0px 0px;;}
+                     
+  }
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 768px) {
+  .ccontainer {margin: 0px 0px 0px 0px;}
+}
 
 .inbox_msg {
 	border: 1px solid #c4c4c4;
@@ -527,5 +537,34 @@ div p.footer-txt{
 		  max-height: 300px;
 		  overflow-y: auto;
 		}
+/*Responsiveness*/    
+@media only screen and (max-height: 590px) {
+  .msg_history {max-height: 280px; overflow-y: auto;}
+                  
+    }    
+@media only screen and (min-height: 600px) {
+  .msg_history {max-height: 350px; overflow-y: auto;}
+              
+}
 
+@media only screen and (min-height: 660px) {
+  .msg_history {max-height: 400px; overflow-y: auto;}
+             }
 
+@media only screen and (min-height: 720px) {
+  .msg_history {max-height: 470px; overflow-y: auto;}
+             }             
+@media only screen and (min-height: 800px) {
+  .msg_history {max-height: 550px; overflow-y: auto;}
+}
+@media only screen and (min-width: 992px) {
+  .msg_history {
+    max-height: 300px;
+    overflow-y: auto;
+  } }
+@media only screen and (min-width: 1200px) {
+  .msg_history {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+}
