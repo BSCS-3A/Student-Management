@@ -402,7 +402,17 @@ nav h5{
     background-color:#dddddd;
     margin: 30px 15px 25px 15px;
     border: 2px solid #124254;
-  }  
+  }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .container {margin: 0px 0px 0px 0px;;}                     
+  }
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 768px) {
+  .container {margin: 0px 0px 0px 0px;}
+}
  #datatable {
 
     width: 100%;
@@ -585,5 +595,3 @@ nav img.user-profile{
 .cmessage{
   font-size: 0.9rem;
 }
-
-  
