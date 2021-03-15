@@ -1,0 +1,8 @@
++--genotp_v1.1--
++Clear List first before generating new otp
++--genotp_v1.2--
++Add condition to avoid duplicate otp
++--genotp_v1.3--
++Scramble number pool to avoid rand function bias
++--genotp_v1.4--
++Remove 0  from number pool resulting in incomplete otp generation
