@@ -373,8 +373,15 @@ nav h5{
       border-color: #124254;
       box-shadow:none ; 
       padding: 10px 20px;
-      margin: 25px 0px 15px 0px!important;      
-      }    
+      margin: 25px 5px 15px 0px!important;      
+      }
+    .btn-button3{
+        background: #dddddd ;
+        border-color: #124254;
+        box-shadow:none ;
+        width: 80px; 
+        margin: 25px 5px 15px 0px!important;      
+        }      
    #save{
       color:#fff;
       background: #124254;
