@@ -207,6 +207,24 @@
   </div>
   <!-- /.modal-dialog --> 
 </div>
+
+<div class="modal fade" id="send" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+  <div class="modal-dialog">
+<div class="modal-content">
+  <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      <h4 class="modal-title custom_align" id="Heading">Once you confirm, the student will receive their login details.<br>Do you wish to proceed?
+      </h4>
+<div class="modal-footer ">
+<button type="button" class="btn btn-success" id="go2" ><span class= "fa fa-check-circle"></span> Continue</button>
+<button type="button" class="btn btn-default" id= "cancel2" data-dismiss="modal"><span class="fa fa-times-circle"></span> Cancel</button>
+</div>
+</div>
+</div>
+<!-- /.modal-content --> 
+</div>
+<!-- /.modal-dialog --> 
+</div>
 <!--############################################################################################################################################################################################## -->
 <!-- EDIT MODAL -->
 <form action="edit.php" method="POST">
