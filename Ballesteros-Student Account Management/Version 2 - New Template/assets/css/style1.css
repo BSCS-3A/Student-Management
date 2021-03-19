@@ -375,11 +375,20 @@ nav h5{
       padding: 10px 20px;
       margin: 25px 5px 15px 5px!important;      
       }
-    .btn-button3{
+     .btn-button3{
+      color: #eeeeee ;
+      margin: 0px;
+      padding: 0px;
+      background: #124254 ;
+      border-color: #124254;
+      box-shadow:none ; 
+      padding: 10px 20px;
+      margin: 25px 5px 15px 5px!important;      
+      }
+    .btn-button4{
         background: #dddddd ;
-        border-color: #124254;
         box-shadow:none ;
-        width: 80px; 
+        width: 15%; 
         margin: 25px 5px 15px 0px!important;      
         }      
    #save{
@@ -401,6 +410,10 @@ nav h5{
       background-color: #dddddd;
    }
    #go{
+    color:#fff;
+    background: #124254;
+   }
+   #go2{
     color:#fff;
     background: #124254;
    }
