@@ -222,7 +222,7 @@
                 <button type="button" class="btn btn-default" id= "cancel2" data-dismiss="modal"><span class="fa fa-times-circle"></span> Cancel</button>
             </div>
             </div>
-        </div>
+        </div> 
 <!-- /.modal-content --> 
     </div>
 <!-- /.modal-dialog --> 
