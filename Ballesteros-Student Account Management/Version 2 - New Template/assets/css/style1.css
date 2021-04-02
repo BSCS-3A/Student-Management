@@ -260,7 +260,7 @@ nav ul ul ul li{
   }
   
 }
-/*ballesteros*/
+/*-------Student Management//Vote summary------*/
 nav h4{
   font-family: Roboto Regular, sans-serif;
   font-weight: inherit;
@@ -358,7 +358,6 @@ nav h5{
     }
     .btn-button1{
     color: #eeeeee ;
-    padding: 0px;
     background: #124254 ;
     border-color: #124254;
     box-shadow:none ; 
@@ -367,24 +366,31 @@ nav h5{
     }
     .btn-button2{
       color: #eeeeee ;
-      margin: 0px;
-      padding: 0px;
       background: #124254 ;
       border-color: #124254;
       box-shadow:none ; 
       padding: 10px 20px;
-      margin: 25px 5px 15px 5px!important;      
+      margin: 25px 5px 15px 0px!important;      
       }
      .btn-button3{
       color: #eeeeee ;
-      margin: 0px;
-      padding: 0px;
       background: #124254 ;
       border-color: #124254;
       box-shadow:none ; 
       padding: 10px 20px;
-      margin: 25px 5px 15px 5px!important;      
+      margin: 25px 5px 15px 0px!important;      
       }
+      @media only screen and (max-width: 350px) {
+        .btn-button1{
+          margin: 25px 5px 5px 0px!important;      
+          }
+        .btn-button2{
+          margin: 25px 0px 5px 0px!important;      
+            }
+        .btn-button3{
+          margin: 0px 0px 15px 0px!important;      
+      }
+    }
     .btn-button4{
         background: #dddddd ;
         box-shadow:none ;
@@ -422,19 +428,14 @@ nav h5{
     background-color:#dddddd;
     margin: 30px 15px 25px 15px;
     border: 2px solid #124254;
+    height: 100%!important;
   }
-
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  .container {margin: 0px 0px 0px 0px;;}                     
+  .container {margin: 0px 0px 0px 0px;border: none; } 
+         
   }
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 768px) {
-  .container {margin: 0px 0px 0px 0px;}
-}
  #datatable {
-
     width: 100%;
     border: 1px solid #124254;
     font-family: Roboto regular, sans-serif;
@@ -554,7 +555,7 @@ nav img.user-profile{
 }
 
 
-  
+/*------------messagebox----------*/   
   <!--Message Box-->
   ::-webkit-scrollbar {
     width: 15px;
@@ -594,9 +595,50 @@ nav img.user-profile{
   
   .messages-box,
   .chat-box {
-    height: 390px;
+    height: 360px;
     overflow-y: scroll;
   }
+  /*Responsiveness*/    
+@media only screen and (max-height: 590px) {
+  .chat-box{height: 335px;}
+  .messages-box{height: 335px;}
+   
+}   
+@media only screen and (min-height: 600px) {
+  .chat-box{height: 425px;}
+  .messages-box{height: 425px;} 
+         
+}
+@media only screen and (min-height: 660px) {
+  .chat-box{height: 450px;}
+  .messages-box{height: 450px;}
+            
+}
+@media only screen and (min-height: 670px) {
+  .chat-box{height: 470px;}
+  .messages-box{height: 470px;}
+            
+}
+@media only screen and (min-height: 720px) {
+  .chat-box{height: 530px;}
+  .messages-box{height: 530px;}
+   
+           }             
+@media only screen and (min-height: 800px) {
+  .chat-box{height: 595px;}
+  .messages-box{height: 595px;}
+   
+}
+@media only screen and (min-height: 820px) {
+  .chat-box{height: 620px;}
+  .messages-box{height: 620px;}
+  body{background-image: url("../img/adminBG.png");}
+}
+@media only screen and (min-width: 1000px) {
+  .chat-box{height: 360px;}
+  .messages-box{height: 360px;}
+  body{background-image: url("../img/adminBG.png");}
+}
   
   .rounded-lg {
     border-radius: 0.5rem;
