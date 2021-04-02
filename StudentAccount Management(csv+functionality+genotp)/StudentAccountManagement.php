@@ -309,9 +309,9 @@
                 } );</script>
 <!--############################################################################################################################################################################################## -->
 <!-- DELETE SCRIPT -->
-                <script>
+<script>
                   $(document).ready(function() {
-                    $('.DeleteBtn').on('click', function() {
+                    $('#datatable').on('click', '.DeleteBtn', function() {
                       $('#delete').modal('show');
 
                       $tr = $(this).closest('tr');
@@ -331,7 +331,7 @@
 <!-- EDIT SCRIPT -->
                 <script>
                   $(document).ready(function() {
-                    $('.EditBtn').on('click', function() {
+                    $('#datatable').on('click', '.EditBtn', function() {
                       $('#edit').modal('show');
 
                       $tr = $(this).closest('tr');
