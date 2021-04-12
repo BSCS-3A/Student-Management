@@ -278,12 +278,13 @@
           <h4 class="modal-title custom_align" id="Heading">Upload File</h4>
 </div>
       <div class="modal-body">             
-      <div class="alert alert-danger"><span class="fa fa-exclamation-triangle"></span>Please Select File(Only CSV Format)</div>
+      <div class="alert alert-danger"><span class="fa fa-exclamation-triangle"></span>By uploading a new file, the existing record will be replaced and all the lists of candidates, access logs, and voting results will be deleted. <br>Select a new File(Only CSV Format)</div>
+      
 </div>
 
-    <div class="modal-footer ">
+    <div class="modal-footer ">    
                       <!-- import button -->
-                      <form  method="POST" enctype="multipart/form-data">
+                      <form method="POST" enctype="multipart/form-data">
                         <input type="file" name="info_file" required="required" accept=".csv">
                         
                         <input type="submit" name="upload" class="btn btn-button1" value="Upload"/>
