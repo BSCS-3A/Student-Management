@@ -117,8 +117,8 @@
                              
                           <?php
 	                        $db = mysqli_connect('localhost', 'root', '', 'finaldatabase');
-	                        //get the all votes of each student (discard abstain)
-	                        $sqlget = "SELECT vote.student_id, vote.status, vote.candidate_id, student.fname FROM vote INNER JOIN student ON vote.student_id = student.student_id WHERE vote.status = 1";  
+	                        //get all votes of each student (discard abstain)
+	                        $sqlget = "SELECT vote.student_id, vote.status, vote.candidate_id, student.fname FROM vote INNER JOIN student ON vote.student_id = student.student_id WHERE vote.status = 'Voted'";  
 	                        $query = mysqli_query($db,$sqlget);	
 	                        $name = "";
 	                        $pos = array_fill(0,11,0);
@@ -135,7 +135,10 @@
 		                    $sqlget3 = "SELECT fname,lname FROM student WHERE student_id = ".$row2['student_id'];
 		                    $query3 = mysqli_query($db,$sqlget3);
 		                    $row3 = mysqli_fetch_array($query3);
-		                    $ho = $row2['position_id']-1;
+                            $sqlget4 = "SELECT heirarchy_id FROM candidate_position WHERE position_id = ".$row2['position_id'];
+		                    $query4 = mysqli_query($db,$sqlget4);
+		                    $row4 = mysqli_fetch_array($query4);
+		                    $ho = $row4['heirarchy_id']-1;
 		                    $pos[$ho] = 1;
 		                    $flname[$ho] = $row3['fname']." ".$row3['lname'];
 		                    }
@@ -161,7 +164,10 @@
                             $sqlget3 = "SELECT fname,lname FROM student WHERE student_id = ".$row2['student_id'];
                             $query3 = mysqli_query($db,$sqlget3);
                             $row3 = mysqli_fetch_array($query3);
-                            $ho = $row2['position_id']-1;
+                            $sqlget4 = "SELECT heirarchy_id FROM candidate_position WHERE position_id = ".$row2['position_id'];
+		                    $query4 = mysqli_query($db,$sqlget4);
+		                    $row4 = mysqli_fetch_array($query4);
+		                    $ho = $row4['heirarchy_id']-1;
                             $pos[$ho] = 1;
                             $flname[$ho] = $row3['fname']." ".$row3['lname'];
                         }
@@ -173,7 +179,10 @@
                             $sqlget3 = "SELECT fname,lname FROM student WHERE student_id = ".$row2['student_id'];
                             $query3 = mysqli_query($db,$sqlget3);
                             $row3 = mysqli_fetch_array($query3);
-                            $ho = $row2['position_id']-1;
+                            $sqlget4 = "SELECT heirarchy_id FROM candidate_position WHERE position_id = ".$row2['position_id'];
+		                    $query4 = mysqli_query($db,$sqlget4);
+		                    $row4 = mysqli_fetch_array($query4);
+		                    $ho = $row4['heirarchy_id']-1;
                             $pos[$ho] = 1;
                             $flname[$ho] = $row3['fname']." ".$row3['lname'];
                         }
