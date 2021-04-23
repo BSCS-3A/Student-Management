@@ -37,6 +37,7 @@
                                 ?>
                           </div>
                         <?php endif ?>
+                        
 <!--############################################################################################################################################################################################## -->
     <nav>
         <input id="nav-toggle" type="checkbox">
@@ -104,8 +105,21 @@
         <section> 
             <div class="btn-toolbar">
                 <button class="btn btn-button1" data-title="new" data-toggle="modal" data-target="#new" data-placement="top" data-toggle="tooltip" title="Import new list"><span class="fa fa-file-import"></span> IMPORT</button>        
-
-                <button class="btn btn-button2"  data-title="otp" data-toggle="modal" data-target="#otp"data-placement="top" data-toggle="tooltip" title="Generat OTP for this list"><span class="fa fa-lock"></span> GENERATE OTP</button>
+               
+                <!--Edited button to be disabled during the election-->       
+                <button class="btn btn-button2"  data-title="otp" data-toggle="modal" data-target="#otp"data-placement="top" data-toggle="tooltip" title="Generat OTP for this list" 
+                        <?php 
+                        $conn = mysqli_connect("localhost", "root", "", "seproject");
+                        $checktime = "SELECT * FROM vote_event"; 
+                        $DnT = $connect->query($checktime);
+                        while($row = $DnT->fetch_assoc()){  
+                            $now = date("Y-m-d h:i:s");
+                            if($now >= $row['start_date'] && $now <= $row['end_date'] ){
+                            ?> disabled <?php    
+                            }
+                        }
+                        ?>><span class="fa fa-lock"></span> GENERATE OTP</button>
+                 <!--Edited button to be disabled during the election-->          
 
                 <button class="btn btn-button2"  data-title="send" data-toggle="modal" data-target="#send"data-placement="top" data-toggle="tooltip" title="Send Login Credentials"><span class="fa fa-envelope-open"></span> SEND</button>
             </div>
