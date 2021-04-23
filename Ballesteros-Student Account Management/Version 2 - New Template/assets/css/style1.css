@@ -425,10 +425,10 @@ nav h5{
    }
 
 .container{
-    background-color:#dddddd;
     margin: 30px 15px 25px 15px;
     border: 2px solid #124254;
     height: 100%!important;
+    background:rgba(255,255,255, 0.7);
   }
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -443,6 +443,7 @@ nav h5{
     table-layout: auto;
     margin:0px;
     text-align: center;
+    background:rgba(255,255,255, 0.6);
   }
   
   table.center {
