@@ -134,7 +134,7 @@ session_start();
                 function loadLog(){
                     clearInterval(rpt);
                     var oldscrollHeight = $("#chatbox")[0].scrollHeight - 20; //Scroll height before the request
-                    var sender = "<?php echo "chats/".$_GET['id'].".html"?>";
+                    var sender = "<?php echo "../user/msg/".$_GET['id'].".html"?>";
                     $.ajax({
                         url: sender,
                         cache: false,

@@ -91,13 +91,13 @@
           <div class="messages-box">
             <div class="list-group rounded-0">
             <?php
-            $dir = 'chats';
+            $dir = '../user/msg';
             $files = scandir($dir);
             foreach($files as $open){
             if($open == "." || $open == ".." );
             else {
               $sname = explode(".", $open); 
-              $file = file_get_contents("chats/".$sname[0].".html");
+              $file = file_get_contents("../user/msg/".$sname[0].".html");
               $rows = explode("##", $file);
               $rowsx = explode("||",$rows[0]);
               if(isset($rows[0])){
@@ -153,7 +153,7 @@
                     function loadLog(){
                     clearInterval(rpt);
                     var oldscrollHeight = $("#chatbox")[0].scrollHeight - 20; //Scroll height before the request
-                    var sender = "<?php echo "chats/".$_GET['id'].".html"?>";
+                    var sender = "<?php echo "../user/msg/".$_GET['id'].".html"?>";
                     $.ajax({
                         url: sender,
                         cache: false,
