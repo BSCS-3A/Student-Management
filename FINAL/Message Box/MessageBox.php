@@ -99,7 +99,8 @@
               $sname = explode(".", $open); 
               $file = file_get_contents("../user/msg/".$sname[0].".html");
               $rows = explode("##", $file);
-              $rowsx = explode("||",$rows[0]);
+              $nm = count($rows);
+              $rowsx = explode("||",$rows[$nm-2]);
               if(isset($rows[0])){
               echo   '<a href="MessageBox.php?id='.$sname[0].'" class="list-group-item list-group-item-action list-group-item-light rounded-0">                  
               <div class="media-body ml-4">
