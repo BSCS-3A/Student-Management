@@ -348,6 +348,7 @@ nav h5{
     border-color: #5cb85c!important;
     box-shadow:none ;
     }
+    .btn-primary:hover{background-color: #4a934a!important;}
     .btn-danger {
     color: #fff ;
     margin: 0px;
@@ -356,6 +357,7 @@ nav h5{
     border-color: #d9534f!important;
     box-shadow:none ;
     }
+    .btn-danger:hover{background-color: #d93e39!important;}
     .btn-button1{
     color: #eeeeee ;
     background: #124254 ;
@@ -364,6 +366,7 @@ nav h5{
     padding: 10px 20px;
     margin: 25px 5px 15px 0px!important;      
     }
+    .btn-button1:hover{background-color:#18566e !important; color: #EEEEEE!important;}
     .btn-button2{
       color: #eeeeee ;
       background: #124254 ;
@@ -372,6 +375,7 @@ nav h5{
       padding: 10px 20px;
       margin: 25px 5px 15px 0px!important;      
       }
+     .btn-button2:hover{background-color:#18566e !important; color: #EEEEEE!important;}
      .btn-button3{
       color: #eeeeee ;
       background: #124254 ;
@@ -380,6 +384,7 @@ nav h5{
       padding: 10px 20px;
       margin: 25px 5px 15px 0px!important;      
       }
+      .btn-button3:hover{background-color:#18566e !important; color: #EEEEEE!important;}
       @media only screen and (max-width: 350px) {
         .btn-button1{
           margin: 25px 5px 5px 0px!important;      
@@ -396,33 +401,39 @@ nav h5{
         box-shadow:none ;
         width: 15%; 
         margin: 25px 5px 15px 0px!important;      
-        }      
+        }
+    .btn-button4:hover{background-color: 	#c1c1c1!important;}          
    #save{
       color:#fff;
       background: #124254;
       margin-bottom: 5px; 
    }
+   #save:hover{background-color:#18566e !important; color: #EEEEEE!important;}  
 
    #cancel{
       background-color:#dddddd;
-      margin:auto;
+      margin:auto;}
+   #cancel:hover{background-color: 	#c1c1c1!important;}    
 
-   }
    #continue{
       background-color: #d9534f;
       color:#fff;
    }
+   #continue:hover{background-color: #C23B22 !important;} 
    #cancel2{
       background-color: #dddddd;
    }
+   #cancel2:hover{background-color: 	#c1c1c1!important;}  
    #go{
     color:#fff;
     background: #124254;
    }
+   #go:hover{background-color:#18566e !important; color: #EEEEEE!important;}   
    #go2{
     color:#fff;
     background: #124254;
    }
+   #go2:hover{background-color:#18566e !important; color: #EEEEEE!important;}  
 
 .container{
     margin: 30px 15px 25px 15px;
@@ -473,7 +484,7 @@ nav h5{
       max-height: 150px;
       overflow: hidden;
 }
-
+table tbody tr:hover { background-color: #D3D3D3; }
 article p{
   font-family: Roboto regular, sans-serif;
   color: white;
