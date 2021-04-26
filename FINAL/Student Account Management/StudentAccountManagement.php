@@ -4,7 +4,7 @@
     // database connection
     include("connect.php");
     include("email.php");
-    include ("edit.php");
+    include("edit.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -163,10 +163,32 @@
                                 <td style="white-space: nowrap;">
                         
                                     <!-- Edit Button -->
-                                    <button class="btn btn-primary btn-xs EditBtn" data-title="Edit" data-toggle="modal" data-placement="top" data-toggle="tooltip" title="Edit" ><span class="fa fa-edit"></span> EDIT</button>
+                                    <button class="btn btn-primary btn-xs EditBtn" data-title="Edit" data-toggle="modal" data-placement="top" data-toggle="tooltip" title="Edit" 
+                                    <?php 
+                                    $conn = mysqli_connect("localhost", "root", "", "seproject");
+                                    $checktime = "SELECT * FROM vote_event"; 
+                                    $DnT = $connect->query($checktime);
+                                    while($row = $DnT->fetch_assoc()){  
+                                        $now = date("Y-m-d h:i:s");
+                                        if($now >= $row["start_date"] && $now <= $row["end_date"] ){
+                                        ?> disabled <?php    
+                                        }
+                                    }
+                                    ?>><span class="fa fa-edit"></span> EDIT</button>
 
                                     <!-- Delete Button -->
-                                    <button class="btn btn-danger btn-xs DeleteBtn" data-title="Delete" data-toggle="modal"  data-placement="top" data-toggle="tooltip" title="Delete" ><span class="fa fa-trash-alt"></span> DELETE</button>
+                                    <button class="btn btn-danger btn-xs DeleteBtn" data-title="Delete" data-toggle="modal"  data-placement="top" data-toggle="tooltip" title="Delete" 
+                                    <?php 
+                                    $conn = mysqli_connect("localhost", "root", "", "seproject");
+                                    $checktime = "SELECT * FROM vote_event"; 
+                                    $DnT = $connect->query($checktime);
+                                    while($row = $DnT->fetch_assoc()){  
+                                        $now = date("Y-m-d h:i:s");
+                                        if($now >= $row['start_date'] && $now <= $row['end_date'] ){
+                                        ?> disabled <?php    
+                                        }
+                                    }
+                                    ?>><span class="fa fa-trash-alt"></span> DELETE</button>
                                     </td>
                     <?php
                             '</tr>';
