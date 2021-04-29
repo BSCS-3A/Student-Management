@@ -393,15 +393,17 @@ nav h5{
           margin: 0px 500px 5px 0px!important;      
             }
         .btn-button3{
-          margin: 0px 0px 15px 0px!important;  
-    
-      }
+          margin: 0px 0px 15px 0px!important;}
+        .btn-button4{
+            width: 25% !important;
+            margin: 30px 15px 10px 0px!important; 
+            }    
     }
     .btn-button4{
         background: #dddddd ;
         box-shadow:none ;
-        width: 15%; 
-        margin: 25px 5px 15px 0px!important;      
+        width: 15%;        
+        margin-top: 10px ;      
         }
     .btn-button4:hover{background-color: 	#c1c1c1!important;}
     .btn-button5{
