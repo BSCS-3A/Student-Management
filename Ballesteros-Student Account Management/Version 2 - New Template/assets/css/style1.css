@@ -385,15 +385,16 @@ nav h5{
       margin: 25px 5px 15px 0px!important;      
       }
       .btn-button3:hover{background-color:#18566e !important; color: #EEEEEE!important;}
-      @media only screen and (max-width: 350px) {
+      @media only screen and (max-width: 600px) {
         .btn-button1{
-          margin: 25px 5px 5px 0px!important;      
+          margin: 25px 2px 5px 0px!important;    
           }
         .btn-button2{
-          margin: 25px 0px 5px 0px!important;      
+          margin: 0px 500px 5px 0px!important;      
             }
         .btn-button3{
-          margin: 0px 0px 15px 0px!important;      
+          margin: 0px 0px 15px 0px!important;  
+    
       }
     }
     .btn-button4{
@@ -402,7 +403,18 @@ nav h5{
         width: 15%; 
         margin: 25px 5px 15px 0px!important;      
         }
-    .btn-button4:hover{background-color: 	#c1c1c1!important;}          
+    .btn-button4:hover{background-color: 	#c1c1c1!important;}
+    .btn-button5{
+      color: #eeeeee ;
+      background: #124254 ;
+      border-color: #124254;
+      box-shadow:none ; 
+      padding: 10px 20px;
+      margin: 25px 5px 15px 0px!important;      
+      }
+      .btn-button5:hover{background-color:#18566e !important; color: #EEEEEE!important;} 
+    
+    
    #save{
       color:#fff;
       background: #124254;
@@ -436,16 +448,18 @@ nav h5{
    #go2:hover{background-color:#18566e !important; color: #EEEEEE!important;}  
 
 .container{
-    margin: 30px 15px 25px 15px;
-    border: 2px solid #124254;
-    height: 100%!important;
+    max-width: 100%;
+    height: 150%;   
+  }
+  div.container{
     background:rgba(255,255,255, 0.7);
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border: 2px solid #124254;
+    width: 80%;
+    height: auto;
   }
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  .container {margin: 0px 0px 0px 0px;border: none; } 
-         
-  }
+
  #datatable {
     width: 100%;
     border: 1px solid #124254;
