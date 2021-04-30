@@ -88,8 +88,10 @@
           <div class="bg-gray px-4 py-1 bg-light" id="recent">
             <p class="h5 mb-0 py-2">Recent</p>
           </div>
-          <div class="messages-box">
+          <div id ="take" class="messages-box">
             <div class="list-group rounded-0">
+           
+            <!-- message list-->
             <?php
             $dir = '../user/msg';
             $files = scandir($dir);
@@ -130,7 +132,20 @@
                 ';
              }}}
             ?>
-          
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script type="text/javascript"> 
+           setInterval(function loading(){
+            $.ajax({
+            url : 'load.php',
+            type : 'POST',
+            success : function (result) {
+              document.getElementById("take").innerHTML = result;
+            },
+            });
+            }, 1000);
+            
+            </script>
+            <!-- message list-->
   
             </div>
           </div>
