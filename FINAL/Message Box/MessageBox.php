@@ -20,7 +20,7 @@
   $server = strtolower($_SERVER['HTTP_USER_AGENT']);
   $isMob = is_numeric(strpos($server, "mobile"));
   if($isMob){
-    echo "<p style='color:white';>You are using a mobile device! It is recommended to switch into landscape mode.</p>";
+    echo "<p style='color:white';>You are using your mobile device, it is preferable to use the message box in landscape mode.</p>";
   } 
 ?>
 <body>
