@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,6 +16,13 @@
     <script type="text/javascript"> (function() { var css = document.createElement('link'); css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
     <title> Message Box</title>
 </head>
+<?php
+  $server = strtolower($_SERVER['HTTP_USER_AGENT']);
+  $isMob = is_numeric(strpos($server, "mobile"));
+  if($isMob){
+    echo "<p style='color:white';>You are using a mobile device! It is recommended to switch into landscape mode.</p>";
+  } 
+?>
 <body>
     <nav class="cnavie">
         <input id="nav-toggle" type="checkbox">
@@ -88,9 +96,9 @@
           <div class="bg-gray px-4 py-1 bg-light" id="recent">
             <p class="h5 mb-0 py-2">Recent</p>
           </div>
-          <div id ="take" class="messages-box">
+          <div id ="take"  class="messages-box">
             <div class="list-group rounded-0">
-           
+
             <!-- message list-->
             <?php
             $dir = '../user/msg';
