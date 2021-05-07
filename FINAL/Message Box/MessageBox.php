@@ -161,6 +161,13 @@
       </div>
       <!-- Chat Box-->
       <div class="col-7 px-0">
+      <div  style=' background: white;'>
+        <?php 
+        if(isset($_GET['id'])){
+        echo "<h4 style='color: black'>".$_GET['id']."<h4/>" ;
+        }
+        ?>
+        </div>
         <div id = "chatbox" class="px-4 py-5 chat-box bg-white " ></div>
         <!-- Typing area -->
         <form method="POST" class="bg-light">
