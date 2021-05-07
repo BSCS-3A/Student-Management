@@ -16,13 +16,6 @@
     <script type="text/javascript"> (function() { var css = document.createElement('link'); css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
     <title> Message Box</title>
 </head>
-<?php
-  $server = strtolower($_SERVER['HTTP_USER_AGENT']);
-  $isMob = is_numeric(strpos($server, "mobile"));
-  if($isMob){
-    echo "<p style='color:white';>You are using your mobile device, it is preferable to use the message box in landscape mode.</p>";
-  } 
-?>
 <body>
     <nav class="cnavie">
         <input id="nav-toggle" type="checkbox">
@@ -87,16 +80,25 @@
   <div class="ccheader">
     <h3>MESSAGE BOX</h3>
 </div>
+<?php
+  $server = strtolower($_SERVER['HTTP_USER_AGENT']);
+  $isMob = is_numeric(strpos($server, "mobile"));
+  if($isMob){
+    echo '<div class="alert alert-secondary" id="alert"><button type="button" class="close" data-dismiss="alert">x</button>
+    You are using a mobile device! It is recommended to switch into landscape mode.</div>';
+  }
+?>
+
   <div class="container">  
-    <div class="row rounded-lg overflow-hidden shadow">
+    <div class="row rounded-lg overflow-hidden shadow" style="background-color:white">
       <!-- Users box-->
       <div class="col-5 px-0">
         <div class="bg-white">
   
           <div class="bg-gray px-4 py-1 bg-light" id="recent">
-            <p class="h5 mb-0 py-2">Recent</p>
+            <p class="h4 mb-0 py-2">Recent</p>
           </div>
-          <div id ="take"  class="messages-box">
+          <div id ="take" class="messages-box">
             <div class="list-group rounded-0">
 
             <!-- message list-->
@@ -133,9 +135,11 @@
                 echo   '<a href="MessageBox.php?id='.$sname[0].'" class="list-group-item list-group-item-action list-group-item-light rounded-0">                  
                 <div class="media-body ml-4">
                 <div class="d-flex align-items-center justify-content-between mb-1">
-                <p class="cname">'.$sname[0].'</p><small class="small font-weight-bold">'.$rowsx[2]." ".$rowsx[3].'</small>
-                </div>
-                <p class="cmessage">'.$rowsx[1].'</p>  
+                <p class="cname">'.$sname[0].'</p>
+                </div>              
+                <p class="cmessage">'.$rowsx[1].'</p>
+                <div class="float-sm-right">
+                <small class="small font-weight-bold" >'.$rowsx[2]." ".$rowsx[3].'</small></div>  
                 </div></a>
                 ';
              }}}
@@ -161,18 +165,18 @@
       </div>
       <!-- Chat Box-->
       <div class="col-7 px-0">
-      <div  style=' background: white;'>
+      <div  class="sender">
         <?php 
         if(isset($_GET['id'])){
-        echo "<h4 style='color: black'>".$_GET['id']."<h4/>" ;
+        echo "<h4 style='color: #124254'>".$_GET['id']."<h4/>" ;
         }
         ?>
         </div>
-        <div id = "chatbox" class="px-4 py-5 chat-box bg-white " ></div>
+        <div id = "chatbox" class="px-4 py-1 chat-box bg-white " ></div>
         <!-- Typing area -->
         <form method="POST" class="bg-light">
-          <div class="input-group">
-            <input  type="text" id= "usermsg" placeholder="Type a message" aria-describedby="button-addon2" class="form-control rounded-0 border-0 py-4 bg-light">
+          <div class="input-group pr-5 pl-3 py-1" id="type">
+          <input  type="text" id= "usermsg" placeholder="Type a message" aria-describedby="button-addon2" class="form-control rounded-0 border-0 py-4 pb-2 mt-1 bg-light">
             <div class="input-group-append">
             <button id="button-addon2" type="submit" class="btn btn-link"> <i class="fa fa-paper-plane"></i></button>
             </div>
