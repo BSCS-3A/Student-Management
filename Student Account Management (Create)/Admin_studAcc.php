@@ -327,7 +327,7 @@ $row =  $DnT->fetch_row();
 
                         <form method="POST">
                             <button type="submit" class="btn btn-success" id="go2" name="sendEmail"
-                                value="Continue"><span class="fa fa-times-circle"></span> Continue</button>
+                                value="Continue"><span class="fa fa-check-circle"></span> Continue</button>
                             <button type="button" class="btn btn-default" id="cancel2" data-dismiss="modal"><span
                                     class="fa fa-times-circle"></span> Cancel</button>
 
