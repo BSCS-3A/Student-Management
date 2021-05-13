@@ -50,83 +50,79 @@ $row =  $DnT->fetch_row();
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script type="text/javascript" src="../js/admin_session_timer.js"></script>
     <script type="text/javascript">
-        (function() {
-            var css = document.createElement('link');
-            css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css';
-            css.rel = 'stylesheet';
-            css.type = 'text/css';
-            document.getElementsByTagName('head')[0].appendChild(css);
-        })();
+    (function() {
+        var css = document.createElement('link');
+        css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css';
+        css.rel = 'stylesheet';
+        css.type = 'text/css';
+        document.getElementsByTagName('head')[0].appendChild(css);
+    })();
     </script>
-    <title> Student Account Management  | BUCEILS HS Online Voting System</title>
+    <title> Student Account Management | BUCEILS HS Online Voting System</title>
 </head>
 
 <body>
 
-<!-- navigation bar -->
-<?php include "navAdmin.php"; ?>
-    
+    <!-- navigation bar -->
+    <?php include "navAdmin.php"; ?>
+
     <div class="cheader">
         <h3>STUDENT ACCOUNT MANAGEMENT</h3>
     </div>
-    
+
 
     <!--############################################################################################################################################################################################## -->
     <!-- CONFIRMATION MESSAGE FOR EDIT AND DELETE-->
     <?php
     if (isset($_SESSION['message'])) : ?>
-        <div class="alert alert-<?= $_SESSION['msg_type'] ?>">
-            <?php
+    <div class="alert alert-<?= $_SESSION['msg_type'] ?>">
+        <?php
             echo $_SESSION['message'];
             unset($_SESSION['message']);
             ?>
-        </div>
+    </div>
     <?php endif ?>
     <!--############################################################################################################################################################################################## -->
-    
+
     <div class="container">
         <section>
-            <div class="btn-toolbar">
+            <div class='flex-container'>
 
-            <button class="btn btn-button0" data-title="add" data-toggle="modal" data-target="#add" data-placement="top" data-toggle="tooltip" title="Add new student" 
-
-                <?php 
+                <button class="btn btn-button0" data-title="add" data-toggle="modal" data-target="#add"
+                    data-placement="top" data-toggle="tooltip" title="Add new student" <?php 
                     $now = date("Y-m-d G:i:s"); // G for 24hr format
                     if($now >= $row[1] && $now <= $row[2] ){
                     ?> disabled <?php    
                     }?>>
-                <span class="fa fa-user-plus"></span> ADD</button>  
+                    <span class="fa fa-user-plus"></span> ADD</button>
 
-                <button class="btn btn-button1" data-title="new" data-toggle="modal" data-target="#new" data-placement="top" data-toggle="tooltip" title="Import new list" 
-
-                <?php 
+                <button class="btn btn-button1" data-title="new" data-toggle="modal" data-target="#new"
+                    data-placement="top" data-toggle="tooltip" title="Import new list" <?php 
                     $now = date("Y-m-d G:i:s"); // G for 24hr format
                     if($now >= $row[1] && $now <= $row[2] ){
                     ?> disabled <?php    
                     }?>>
-                <span class="fa fa-file-import"></span> IMPORT</button>      
-               
-               <!--Edited button to be disabled during the election-->       
-               <button class="btn btn-button2"  data-title="otp" data-toggle="modal" data-target="#otp"data-placement="top" data-toggle="tooltip" title="Generat OTP for this list"  
+                    <span class="fa fa-file-import"></span> IMPORT</button>
 
-                <?php 
+                <!--Edited button to be disabled during the election-->
+                <button class="btn btn-button2" data-title="otp" data-toggle="modal" data-target="#otp"
+                    data-placement="top" data-toggle="tooltip" title="Generate OTP for this list" <?php 
                     $now = date("Y-m-d G:i:s"); // G for 24hr format
                     if($now >= $row[1] && $now <= $row[2] ){
                     ?> disabled <?php    
                     }?>>
-                       <span class="fa fa-lock"></span> GENERATE OTP</button>
-                <!--Edited button to be disabled during the election-->     
+                    <span class="fa fa-lock"></span> GENERATE OTP</button>
+                <!--Edited button to be disabled during the election-->
 
 
-                <button class="btn btn-button3" data-title="send" data-toggle="modal" data-target="#send" data-placement="top" data-toggle="tooltip" title="Send Login Credentials"  
-
-                <?php 
+                <button class="btn btn-button3" data-title="send" data-toggle="modal" data-target="#send"
+                    data-placement="top" data-toggle="tooltip" title="Send Login Credentials" <?php 
                     $now = date("Y-m-d G:i:s"); // G for 24hr format
                     if($now >= $row[1] && $now <= $row[2] ){
                     ?> disabled <?php    
                     }?>>
 
-                 <span class="fa fa-envelope-open"></span> SEND</button>
+                    <span class="fa fa-envelope-open"></span> SEND</button>
 
             </div>
         </section>
@@ -166,35 +162,33 @@ $row =  $DnT->fetch_row();
                                 <td>' . $row["otp"] . '</td>
                                     '
                             ?>
-                                <td style="white-space: nowrap;">
+                            <td style="white-space: nowrap;">
 
                                 <?php   // for button disable inside table
                                     $DnT = $connect->query($checktime);
                                     $row =  $DnT->fetch_row(); 
                                 ?>
 
-                                    <!-- Edit Button -->
-                                    <button class="btn btn-primary btn-xs EditBtn" data-title="Edit" data-toggle="modal" data-placement="top" data-toggle="tooltip" title="Edit"
-
-                                    <?php 
+                                <!-- Edit Button -->
+                                <button class="btn btn-primary btn-xs EditBtn" data-title="Edit" data-toggle="modal"
+                                    data-placement="top" data-toggle="tooltip" title="Edit" <?php 
                                         $now = date("Y-m-d G:i:s"); // G for 24hr format
                                         if($now >= $row[1] && $now <= $row[2] ){
                                         ?> disabled <?php    
                                         }?>>
-                                        
+
                                     <span class="fa fa-edit"></span> EDIT</button>
 
-                                    <!-- Delete Button -->
-                                    <button class="btn btn-danger btn-xs DeleteBtn" data-title="Delete" data-toggle="modal"  data-placement="top" data-toggle="tooltip" title="Delete"
-
-                                    <?php 
+                                <!-- Delete Button -->
+                                <button class="btn btn-danger btn-xs DeleteBtn" data-title="Delete" data-toggle="modal"
+                                    data-placement="top" data-toggle="tooltip" title="Delete" <?php 
                                         $now = date("Y-m-d G:i:s"); // G for 24hr format
                                         if($now >= $row[1] && $now <= $row[2] ){
                                         ?> disabled <?php    
                                         }?>>
-                                        
+
                                     <span class="fa fa-trash-alt"></span> DELETE</button>
-                                    </td>
+                            </td>
                             <?php
                                 '</tr>';
                             }
@@ -206,52 +200,62 @@ $row =  $DnT->fetch_row();
             </div>
         </div>
     </div>
-<!--############################################################################################################################################################################################## -->
-<!-- ADD MODAL -->
+
+    <!-- ADD MODAL -->
     <div>
         <form action="create_studAcc.php" method="POST">
-        <div class="modal fade" id="add" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                        <h4 class="modal-title custom_align" id="Heading">Add New Student</h4>
+            <div class="modal fade" id="add" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h4 class="modal-title custom_align" id="Heading">Add New Student</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <input class="form-control " name="Add_ID" type="text" placeholder="Enter Student ID"
+                                    required="required">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control " name="lname" id="lname" type="text"
+                                    placeholder="Enter Last Name" required="required">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control " name="fname" id="fname" type="text"
+                                    placeholder="Enter First Name" required="required">
+                            </div>
+                            <div class="form-group">
+                                <!-- Do not require, not all students have middle name -->
+                                <input class="form-control " name="Mname" id="Mname" type="text"
+                                    placeholder="Enter Middle Name">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control " name="gender" id="gender" type="text"
+                                    placeholder="Enter Gender" required="required">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control " name="bumail" id="bumail" type="text"
+                                    placeholder="Enter Email" required="required">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control " name="grade_level" id="grade_level" type="text"
+                                    placeholder="Enter Grade Level" required="required">
+                            </div>
+                        </div>
+                        <div class="modal-footer ">
+                            <button type="submit" name="add" class="btn btn-warning btn-lg" id="save"
+                                style="width: 100%;"><span class="fa fa-check-circle"></span> Add</button>
+                            <button type="button" class="btn btn-default" id="cancel" style="width:100%;"
+                                data-dismiss="modal"><span class="fa fa-times-circle"></span> Cancel</button>
+                        </div>
                     </div>
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <input class="form-control " name="Add_ID" type="text" placeholder="Enter Student ID" required="required">
-                        </div>
-                        <div class="form-group">
-                            <input class="form-control " name="lname" type="text" placeholder="Enter Last Name" required="required">
-                        </div>
-                        <div class="form-group">
-                            <input class="form-control " name="fname" type="text" placeholder="Enter First Name" required="required">
-                        </div>
-                        <div class="form-group"> <!-- Do not require, not all students have middle name -->
-                            <input class="form-control " name="Mname" type="text" placeholder="Enter Middle Name">
-                        </div>
-                        <div class="form-group">
-                            <input class="form-control " name="gender" ype="text" placeholder="Enter Gender" required="required">
-                        </div>
-                        <div class="form-group">
-                            <input class="form-control " name="bumail" type="text" placeholder="Enter Email" required="required">
-                        </div>
-                        <div class="form-group">
-                            <input class="form-control " name="grade_level" type="text" placeholder="Enter Grade Level" required="required">
-                        </div>
-                    </div>
-                    <div class="modal-footer ">
-                        <button type="submit" name="add" class="btn btn-warning btn-lg" id = "save" style="width: 100%;"><span class="fa fa-check-circle"></span> Add</button>
-                        <button type="button" class="btn btn-default" id="cancel" style="width:100%;" data-dismiss="modal"><span class="fa fa-times-circle"></span> Cancel</button>
-                    </div>
+                    <!-- /.modal-content -->
                 </div>
-                <!-- /.modal-content -->
+                <!-- /.modal-dialog -->
             </div>
-            <!-- /.modal-dialog -->
-        </div>
-    </form>
+        </form>
     </div>
-<!--############################################################################################################################################################################################## -->
+
     <div class="modal fade" id="new" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -260,7 +264,10 @@ $row =  $DnT->fetch_row();
                     <h4 class="modal-title custom_align" id="Heading">Upload File</h4>
                 </div>
                 <div class="modal-body">
-                <div class="alert alert-danger"><span class="fa fa-exclamation-triangle"></span> WARNING! <br> By uploading a new file, the existing student record will be replaced, and all student related data, such as results, list of candidates, and logs, will be deleted. <br><br><b>Select a new file (Only in CSV Format)</b></div>
+                    <div class="alert alert-danger"><span class="fa fa-exclamation-triangle"></span> WARNING! <br> By
+                        uploading a new file, the existing student record will be replaced, and all student related
+                        data, such as results, list of candidates, and logs, will be deleted. <br><br><b>Select a new
+                            file (Only in CSV Format)</b></div>
                 </div>
 
                 <div class="modal-footer ">
@@ -274,8 +281,10 @@ $row =  $DnT->fetch_row();
                         <?php //echo $message; ?>
 
                         <br />
-                        <input type="submit" name="upload" class="btn btn-button0" value="Upload" />
-                        <input class="btn btn-button4" data-dismiss="modal" value="Cancel" />
+                        <button type="submit" name="upload" class="btn btn-button6"><span
+                                class="fa fa-check-circle"></span> Upload</button>
+                        <button class="btn btn-button4" data-dismiss="modal"><span class="fa fa-times-circle"></span>
+                            Cancel</button>
                     </form>
                     <!--  -->
                 </div>
@@ -288,11 +297,15 @@ $row =  $DnT->fetch_row();
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    <h4 class="modal-title custom_align" id="Heading">Once you confirm, the system will generate one time password for this list. Do you wish to proceed?</h4>
+                    <h4 class="modal-title custom_align" id="Heading">Once you confirm, the system will generate one
+                        time password for this list. Do you wish to proceed?</h4>
                     <form method="POST">
                         <div class="modal-footer ">
-                            <button type="submit" name="go" class="btn btn-success" id="go"><span class="fa fa-check-circle"></span> Continue</button>
-                            <button type="button" class="btn btn-default" id="cancel2" data-dismiss="modal"><span class="fa fa-times-circle"></span> Cancel</button>
+
+                            <button type="submit" name="go" class="btn btn-success" id="go"><span
+                                    class="fa fa-check-circle"></span> Continue</button>
+                            <button type="button" class="btn btn-default" id="cancel2" data-dismiss="modal"><span
+                                    class="fa fa-times-circle"></span> Cancel</button>
                         </div>
                     </form>
                 </div>
@@ -306,14 +319,17 @@ $row =  $DnT->fetch_row();
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    <h4 class="modal-title custom_align" id="Heading">Once you confirm, the student will receive their login details.<br>Do you wish to proceed?</h4>
+                    <h4 class="modal-title custom_align" id="Heading">Once you confirm, the student will receive their
+                        login details.<br>Do you wish to proceed?</h4>
 
                     <!-- Send Login credentials btn handler -->
                     <div class="modal-footer ">
 
                         <form method="POST">
-                            <input type="submit" class="btn btn-success" id="go2" name="sendEmail" value="Continue"></input>
-                            <button type="button" class="btn btn-default" id="cancel2" data-dismiss="modal"><span class="fa fa-times-circle"></span> Cancel</button>
+                            <button type="submit" class="btn btn-success" id="go2" name="sendEmail"
+                                value="Continue"><span class="fa fa-times-circle"></span> Continue</button>
+                            <button type="button" class="btn btn-default" id="cancel2" data-dismiss="modal"><span
+                                    class="fa fa-times-circle"></span> Cancel</button>
 
                         </form>
                     </div>
@@ -337,30 +353,40 @@ $row =  $DnT->fetch_row();
                     </div>
                     <div class="modal-body">
                         <div class="form-group">
-                            <input class="form-control " name="Update_ID" id="Update_ID" type="text" readonly="readonly" required="required">
+                            <input class="form-control " name="Update_ID" id="Update_ID" type="text" readonly="readonly"
+                                required="required">
                         </div>
                         <div class="form-group">
-                            <input class="form-control " name="lname" id="lname" type="text" placeholder="Enter Last Name" required="required">
+                            <input class="form-control " name="lname" id="lname" type="text"
+                                placeholder="Enter Last Name" required="required">
                         </div>
                         <div class="form-group">
-                            <input class="form-control " name="fname" id="fname" type="text" placeholder="Enter First Name" required="required">
-                        </div>
-                        <div class="form-group"> <!-- Do not require, not all students have middle name -->
-                            <input class="form-control " name="Mname" id="Mname" type="text" placeholder="Enter Middle Name">
+                            <input class="form-control " name="fname" id="fname" type="text"
+                                placeholder="Enter First Name" required="required">
                         </div>
                         <div class="form-group">
-                            <input class="form-control " name="gender" id="gender" type="text" placeholder="Enter Gender" required="required">
+                            <!-- Do not require, not all students have middle name -->
+                            <input class="form-control " name="Mname" id="Mname" type="text"
+                                placeholder="Enter Middle Name">
                         </div>
                         <div class="form-group">
-                            <input class="form-control " name="bumail" id="bumail" type="text" placeholder="Enter Email" required="required">
+                            <input class="form-control " name="gender" id="gender" type="text"
+                                placeholder="Enter Gender" required="required">
                         </div>
                         <div class="form-group">
-                            <input class="form-control " name="grade_level" id="grade_level" type="text" placeholder="Enter Grade Level" required="required">
+                            <input class="form-control " name="bumail" id="bumail" type="text" placeholder="Enter Email"
+                                required="required">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control " name="grade_level" id="grade_level" type="text"
+                                placeholder="Enter Grade Level" required="required">
                         </div>
                     </div>
                     <div class="modal-footer ">
-                        <button type="submit" name="save" class="btn btn-warning btn-lg" id="save" style="width: 100%;"><span class="fa fa-check-circle"></span> Save</button>
-                        <button type="button" class="btn btn-default" id="cancel" style="width:100%;" data-dismiss="modal"><span class="fa fa-times-circle"></span> Cancel</button>
+                        <button type="submit" name="save" class="btn btn-warning btn-lg" id="save"
+                            style="width: 100%;"><span class="fa fa-check-circle"></span> Save</button>
+                        <button type="button" class="btn btn-default" id="cancel" style="width:100%;"
+                            data-dismiss="modal"><span class="fa fa-times-circle"></span> Cancel</button>
                     </div>
                 </div>
                 <!-- /.modal-content -->
@@ -379,12 +405,15 @@ $row =  $DnT->fetch_row();
                 </div>
                 <form action="./backStudent/delete_studAcc.php" method="POST">
                     <div class="modal-body">
-                        <div class="alert alert-danger"><span class="fa fa-exclamation-triangle"></span> Are you sure you want to delete this Record?</div>
+                        <div class="alert alert-danger"><span class="fa fa-exclamation-triangle"></span> Are you sure
+                            you want to delete this Record?</div>
                         <input type="hidden" name="Delete_ID" id="Delete_ID">
                     </div>
                     <div class="modal-footer ">
-                        <button type="submit" name="continue" class="btn btn-success" id="continue"><span class="fa fa-check-circle"></span> Continue</button>
-                        <button type="button" class="btn btn-default" id="cancel" data-dismiss="modal"><span class="fa fa-times-circle"></span> Cancel</button>
+                        <button type="submit" name="continue" class="btn btn-success" id="continue"><span
+                                class="fa fa-check-circle"></span> Continue</button>
+                        <button type="button" class="btn btn-default" id="cancel" data-dismiss="modal"><span
+                                class="fa fa-times-circle"></span> Cancel</button>
                     </div>
                 </form>
             </div>
@@ -399,62 +428,62 @@ $row =  $DnT->fetch_row();
     <!--############################################################################################################################################################################################## -->
     <!-- DATABLE SCRIPT -->
     <script>
-        $(document).ready(function() {
-            $('#datatable').DataTable({
-                "lengthMenu": [
-                    [10, 25, 50, -1],
-                    [10, 25, 50, "All"]
-                ]
-            });
-            $("[data-toggle=tooltip]").tooltip();
+    $(document).ready(function() {
+        $('#datatable').DataTable({
+            "lengthMenu": [
+                [10, 25, 50, -1],
+                [10, 25, 50, "All"]
+            ]
         });
+        $("[data-toggle=tooltip]").tooltip();
+    });
     </script>
 
     <!--############################################################################################################################################################################################## -->
     <!-- DELETE SCRIPT -->
     <script>
-        $(document).ready(function() {
-            $('#datatable').on('click', '.DeleteBtn', function() {
-                $('#delete').modal('show');
+    $(document).ready(function() {
+        $('#datatable').on('click', '.DeleteBtn', function() {
+            $('#delete').modal('show');
 
-                $tr = $(this).closest('tr');
+            $tr = $(this).closest('tr');
 
-                var data = $tr.children("td").map(function() {
-                    return $(this).text();
-                }).get();
+            var data = $tr.children("td").map(function() {
+                return $(this).text();
+            }).get();
 
-                console.log(data);
+            console.log(data);
 
-                $('#Delete_ID').val(data[0]);
+            $('#Delete_ID').val(data[0]);
 
-            });
         });
+    });
     </script>
     <!--############################################################################################################################################################################################## -->
     <!-- EDIT SCRIPT -->
     <script>
-        $(document).ready(function() {
-            $('#datatable').on('click', '.EditBtn', function() {
-                $('#edit').modal('show');
+    $(document).ready(function() {
+        $('#datatable').on('click', '.EditBtn', function() {
+            $('#edit').modal('show');
 
-                $tr = $(this).closest('tr');
+            $tr = $(this).closest('tr');
 
-                var data = $tr.children("td").map(function() {
-                    return $(this).text();
-                }).get();
+            var data = $tr.children("td").map(function() {
+                return $(this).text();
+            }).get();
 
-                console.log(data);
+            console.log(data);
 
-                $('#Update_ID').val(data[0]);
-                $('#lname').val(data[1]);
-                $('#fname').val(data[2]);
-                $('#Mname').val(data[3]);
-                $('#gender').val(data[4]);
-                $('#bumail').val(data[5]);
-                $('#grade_level').val(data[6]);
+            $('#Update_ID').val(data[0]);
+            $('#lname').val(data[1]);
+            $('#fname').val(data[2]);
+            $('#Mname').val(data[3]);
+            $('#gender').val(data[4]);
+            $('#bumail').val(data[5]);
+            $('#grade_level').val(data[6]);
 
-            });
         });
+    });
     </script>
     <!--############################################################################################################################################################################################## -->
 </body>
