@@ -126,6 +126,17 @@ $row =  $DnT->fetch_row();
 
             </div>
         </section>
+        <div class="dropdown">
+        <select id = "glevel" name = "glevel" style="height:35px;">
+                            <option value = "0">Select Grade Level</option>
+                            <option value = "1">Grade 7</option> 
+                            <option value = "2">Grade 8</option>
+                            <option value = "3">Grade 9</option>
+                            <option value = "4">Grade 10</option>
+                            <option value = "5">Grade 11</option>
+                            <option value = "6">Grade 12</option>
+                            </select>
+        </div>                    
         <div class="row">
             <div class="col-md-12">
                 <div class="table-responsive">
@@ -204,7 +215,7 @@ $row =  $DnT->fetch_row();
     <!-- ADD MODAL -->
     <div>
         <form action="create_studAcc.php" method="POST">
-            <div class="modal fade" id="add" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+            <div class="modal fade" id="add" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">            
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -256,7 +267,7 @@ $row =  $DnT->fetch_row();
         </form>
     </div>
 
-    <div class="modal fade" id="new" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+    <div class="modal fade" id="new" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -292,7 +303,7 @@ $row =  $DnT->fetch_row();
         </div>
     </div>
 
-    <div class="modal fade" id="otp" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+    <div class="modal fade" id="otp" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -314,13 +325,26 @@ $row =  $DnT->fetch_row();
         </div>
         <!-- /.modal-dialog -->
     </div>
-    <div class="modal fade" id="send" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+
+    <div class="modal fade" id="send" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                     <h4 class="modal-title custom_align" id="Heading">Once you confirm, the student will receive their
-                        login details.<br>Do you wish to proceed?</h4>
+                        login details.<br>Do you wish to proceed?</h4></div>
+
+                <div class="modal-body">
+                            <select id = "glevel" name = "glevel" style="height:30px;">
+                            <option value = "0">--Select Grade Level--</option>
+                            <option value = "1">Grade 7</option> 
+                            <option value = "2">Grade 8</option>
+                            <option value = "3">Grade 9</option>
+                            <option value = "4">Grade 10</option>
+                            <option value = "5">Grade 11</option>
+                            <option value = "6">Grade 11</option>
+                            </select>
+                </div>        
 
                     <!-- Send Login credentials btn handler -->
                     <div class="modal-footer ">
@@ -344,7 +368,7 @@ $row =  $DnT->fetch_row();
     <!--############################################################################################################################################################################################## -->
     <!-- EDIT MODAL -->
     <form action="edit_studAcc.php" method="POST">
-        <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+        <div class="modal fade" id="edit" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">    
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -396,7 +420,7 @@ $row =  $DnT->fetch_row();
     </form>
     <!--############################################################################################################################################################################################## -->
     <!-- DELETE MODAL -->
-    <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+    <div class="modal fade" id="delete" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -438,7 +462,6 @@ $row =  $DnT->fetch_row();
         $("[data-toggle=tooltip]").tooltip();
     });
     </script>
-
     <!--############################################################################################################################################################################################## -->
     <!-- DELETE SCRIPT -->
     <script>

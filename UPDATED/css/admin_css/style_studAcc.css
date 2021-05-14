@@ -354,6 +354,11 @@ nav h5 {
     text-transform: uppercase;
 }
 
+.dropdown {
+    margin-bottom: 10px;
+    float: left!important;
+}
+
 .pagination>li {
     display: inline;
     padding: 0px;
