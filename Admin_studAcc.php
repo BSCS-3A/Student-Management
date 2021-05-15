@@ -10,14 +10,7 @@ $checktime = "SELECT * FROM vote_event";
 $DnT = $connect->query($checktime);
 $row =  $DnT->fetch_row(); 
 // row[1] = start date, row[2] = end date
-
-// for disable delete when student is candidate
-$checkcandidate = "SELECT * FROM candidate"; 
-$candid = mysqli_query($connect,$checkcandidate);
-$Cand = mysqli_fetch_array($candid);
 ?>
-
-
 
 <!DOCTYPE html>
 <html>
@@ -151,11 +144,6 @@ $Cand = mysqli_fetch_array($candid);
                                     '
                             ?>
                             <td style="white-space: nowrap;">
-                            <?php
-                            //$Cand = mysqli_fetch_array($candid);
-                            echo $studrow['student_id'];
-                            echo $Cand['student_id'];
-                            ?>
 
                                 <?php   // for button disable inside table
                                     $DnT = $connect->query($checktime);
@@ -166,10 +154,19 @@ $Cand = mysqli_fetch_array($candid);
                                 <button class="btn btn-primary btn-xs EditBtn" data-title="Edit" data-toggle="modal"
                                     data-placement="top" data-toggle="tooltip" title="Edit" <?php 
                                         $now = date("Y-m-d G:i:s"); // G for 24hr format
-                                        if($now >= $row[1] && $now <= $row[2] ){
-                                        ?> disabled <?php    
-                                        }?>>
-
+                                        $checkcandidate = "SELECT * FROM candidate WHERE student_id =".$studrow['student_id'];
+                                        $candid = mysqli_query($connect,$checkcandidate);
+                                        $xzzz= mysqli_fetch_array($candid);
+                                        if($now >= $row[1] && $now <= $row[2]){
+                                        ?> disabled
+                                        <?php
+                                        }
+                                        else{
+                                            if(isset($xzzz['student_id']) && $xzzz['student_id'] == $studrow['student_id']){
+                                                ?>disabled<?php
+                                            }
+                                        }
+                                        ?>>
                                     <span class="fa fa-edit"></span> EDIT</button>
 
                                 <!-- Delete Button -->
@@ -177,12 +174,15 @@ $Cand = mysqli_fetch_array($candid);
                                     data-placement="top" data-toggle="tooltip" title="Delete" <?php 
                                         $now = date("Y-m-d G:i:s"); // G for 24hr format
                                         if($now >= $row[1] && $now <= $row[2] ){
-                                        ?> disabled <?php    
-                                        }?>
+                                        ?> disabled   
                                         <?php
-                                            if($Cand['student_id']==$studrow['student_id'] ){
-                                        ?> disabled <?php
-                                        }?>>
+                                        }
+                                         else{
+                                            if(isset($xzzz['student_id']) && $xzzz['student_id'] == $studrow['student_id']){
+                                                ?>disabled<?php
+                                            }
+                                        }
+                                        ?>>
 
                                     <span class="fa fa-trash-alt"></span> DELETE</button>
                             </td>
