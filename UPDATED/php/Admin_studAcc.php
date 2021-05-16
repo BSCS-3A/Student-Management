@@ -1,21 +1,3 @@
-<!--
-Proj Mngr Notes:
-- changed file name
-- db_conn_studAccMngmt.php
-
-- add "delete all" button or fix file uploading
-(when new list of students, overwrite existing list, including
-the number of students, addressed to the group already)
-- issue on db_conn_studAccMngmt can avoid the addition of delete all,
-instead, truncate all data on table then insert the new data (suggestion)
-pag kunware kasi sa existing table walang student 1-5 then if upload csv with
-student 1-33, di na uupload/insert yung student 1-5 kasi UPDATE ginamit instead
-INSERT. ang UPDATE gumagawa lng ng changes sa existing students, they dont add the
-missing students
-
--->
-
-
 <?php
 include("genotp_studAcc.php");
 include("./backStudent/back_studAccMngmt.php");
@@ -126,17 +108,6 @@ $row =  $DnT->fetch_row();
 
             </div>
         </section>
-        <div class="dropdown">
-        <select id = "glevel" name = "glevel" style="height:35px;">
-                            <option value = "0">Select Grade Level</option>
-                            <option value = "1">Grade 7</option> 
-                            <option value = "2">Grade 8</option>
-                            <option value = "3">Grade 9</option>
-                            <option value = "4">Grade 10</option>
-                            <option value = "5">Grade 11</option>
-                            <option value = "6">Grade 12</option>
-                            </select>
-        </div>                    
         <div class="row">
             <div class="col-md-12">
                 <div class="table-responsive">
@@ -149,7 +120,16 @@ $row =  $DnT->fetch_row();
                                 <th class="min-mobile">MIDDLE NAME</th>
                                 <th class="min-mobile">GENDER</th>
                                 <th class="min-mobile">BU EMAIL</th>
-                                <th class="min-mobile">GRADE LEVEL</th>
+                                <th style="color:white" class="min-mobile"><select name ="lvl" id="lvl" style="background-color:#18566e;">
+                                    <option value="">GRADE LEVEL</option>
+                                    <option value="">ALL</option>
+                                    <option value="7">Grade 7</option>
+                                    <option value="8">Grade 8</option>
+                                    <option value="9">Grade 9</option>
+                                    <option value="10">Grade 10</option>
+                                    <option value="11">Grade 11</option>
+                                    <option value="12">Grade 12</option></select>
+                                </th>
                                 <th class="min-mobile">OTP</th>
                                 <th class="min-mobile">TOOLS</th>
 
@@ -215,7 +195,7 @@ $row =  $DnT->fetch_row();
     <!-- ADD MODAL -->
     <div>
         <form action="create_studAcc.php" method="POST">
-            <div class="modal fade" id="add" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">            
+            <div class="modal fade" id="add" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -224,32 +204,32 @@ $row =  $DnT->fetch_row();
                         </div>
                         <div class="modal-body">
                             <div class="form-group">
-                                <input class="form-control " name="Add_ID" type="text" placeholder="Enter Student ID"
+                                <input autocomplete="off" class="form-control " name="Add_ID" type="text" placeholder="Enter Student ID"
                                     required="required">
                             </div>
                             <div class="form-group">
-                                <input class="form-control " name="lname" id="lname" type="text"
+                                <input autocomplete="off" class="form-control " name="lname" id="lname" type="text"
                                     placeholder="Enter Last Name" required="required">
                             </div>
                             <div class="form-group">
-                                <input class="form-control " name="fname" id="fname" type="text"
+                                <input autocomplete="off" class="form-control " name="fname" id="fname" type="text"
                                     placeholder="Enter First Name" required="required">
                             </div>
                             <div class="form-group">
                                 <!-- Do not require, not all students have middle name -->
-                                <input class="form-control " name="Mname" id="Mname" type="text"
+                                <input autocomplete="off" class="form-control " name="Mname" id="Mname" type="text"
                                     placeholder="Enter Middle Name">
                             </div>
                             <div class="form-group">
-                                <input class="form-control " name="gender" id="gender" type="text"
+                                <input autocomplete="off" class="form-control " name="gender" id="gender" type="text"
                                     placeholder="Enter Gender" required="required">
                             </div>
                             <div class="form-group">
-                                <input class="form-control " name="bumail" id="bumail" type="text"
+                                <input  autocomplete="off" class="form-control " name="bumail" id="bumail" type="text"
                                     placeholder="Enter Email" required="required">
                             </div>
                             <div class="form-group">
-                                <input class="form-control " name="grade_level" id="grade_level" type="text"
+                                <input autocomplete="off" class="form-control " name="grade_level" id="grade_level" type="text"
                                     placeholder="Enter Grade Level" required="required">
                             </div>
                         </div>
@@ -325,50 +305,61 @@ $row =  $DnT->fetch_row();
         </div>
         <!-- /.modal-dialog -->
     </div>
-
+  
+   <!--############################################################################################################################################################################################## -->
+    <!-- SENDING EMAIL MODAL -->
+  
     <div class="modal fade" id="send" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    <h4 class="modal-title custom_align" id="Heading">Once you confirm, the student will receive their
-                        login details.<br>Do you wish to proceed?</h4></div>
+                    <h4 class="modal-title custom_align" id="Heading">Please select grade level you wish to send their login details.<br>Click Continue to proceed.</h4></div>
 
                 <div class="modal-body">
-                            <select id = "glevel" name = "glevel" style="height:30px;">
-                            <option value = "0">--Select Grade Level--</option>
-                            <option value = "1">Grade 7</option> 
-                            <option value = "2">Grade 8</option>
-                            <option value = "3">Grade 9</option>
-                            <option value = "4">Grade 10</option>
-                            <option value = "5">Grade 11</option>
-                            <option value = "6">Grade 11</option>
-                            </select>
-                </div>        
 
-                    <!-- Send Login credentials btn handler -->
-                    <div class="modal-footer ">
+                    <script type="text/javascript">
+                            enableButton = () => {
+
+                                let gradeSelected = document.querySelector('#glevel');
+                                let submitBtn = document.querySelector('#go2');
+                                submitBtn.disabled = !gradeSelected.value;
+                              
+                            }
+                                                                
+                    </script>
 
                         <form method="POST">
-                            <button type="submit" class="btn btn-success" id="go2" name="sendEmail"
-                                value="Continue"><span class="fa fa-check-circle"></span> Continue</button>
-                            <button type="button" class="btn btn-default" id="cancel2" data-dismiss="modal"><span
-                                    class="fa fa-times-circle"></span> Cancel</button>
-
+                            <select required onchange="enableButton()" id = "glevel" name = "glevel" style="height:30px;background-color:#18566e;color:white;" />
+                                <option value = "">Select Grade Level</option>
+                                <option value = "7">Grade 7</option> 
+                                <option value = "8">Grade 8</option>
+                                <option value = "9">Grade 9</option>
+                                <option value = "10">Grade 10</option>
+                                <option value = "11">Grade 11</option>
+                                <option value = "12">Grade 12</option>
+                            </select>
+                             <!-- Send Login credentials btn handler -->
+                             <div class="modal-footer ">
+                                    <button disabled type="submit" class="btn btn-success" id="go2" name="sendEmail" value="Continue">
+                                    <span class="fa fa-check-circle"></span> Continue</type=>
+                                <button type="button" class="btn btn-default" id="cancel2" data-dismiss="modal"><span
+                                        class="fa fa-times-circle"></span> Cancel</button>
+                            </div>
                         </form>
-                    </div>
+                    </div>     
+                        
                 </div>
             </div>
             <!-- /.modal-content -->
         </div>
         <!-- /.modal-dialog -->
     </div>
-
-    </div>
+</div>
     <!--############################################################################################################################################################################################## -->
     <!-- EDIT MODAL -->
     <form action="edit_studAcc.php" method="POST">
-        <div class="modal fade" id="edit" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">    
+        <div class="modal fade" id="edit" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -377,32 +368,32 @@ $row =  $DnT->fetch_row();
                     </div>
                     <div class="modal-body">
                         <div class="form-group">
-                            <input class="form-control " name="Update_ID" id="Update_ID" type="text" readonly="readonly"
+                            <input autocomplete="off" class="form-control " name="Update_ID" id="Update_ID" type="text" readonly="readonly"
                                 required="required">
                         </div>
                         <div class="form-group">
-                            <input class="form-control " name="lname" id="lname" type="text"
+                            <input autocomplete="off" class="form-control " name="lname" id="lname" type="text"
                                 placeholder="Enter Last Name" required="required">
                         </div>
                         <div class="form-group">
-                            <input class="form-control " name="fname" id="fname" type="text"
+                            <input autocomplete="off" class="form-control " name="fname" id="fname" type="text"
                                 placeholder="Enter First Name" required="required">
                         </div>
                         <div class="form-group">
                             <!-- Do not require, not all students have middle name -->
-                            <input class="form-control " name="Mname" id="Mname" type="text"
+                            <input autocomplete="off" class="form-control " name="Mname" id="Mname" type="text"
                                 placeholder="Enter Middle Name">
                         </div>
                         <div class="form-group">
-                            <input class="form-control " name="gender" id="gender" type="text"
+                            <inputautocomplete="off" class="form-control " name="gender" id="gender" type="text"
                                 placeholder="Enter Gender" required="required">
                         </div>
                         <div class="form-group">
-                            <input class="form-control " name="bumail" id="bumail" type="text" placeholder="Enter Email"
+                            <input autocomplete="off" class="form-control " name="bumail" id="bumail" type="text" placeholder="Enter Email"
                                 required="required">
                         </div>
                         <div class="form-group">
-                            <input class="form-control " name="grade_level" id="grade_level" type="text"
+                            <input autocomplete="off" class="form-control " name="grade_level" id="grade_level" type="text"
                                 placeholder="Enter Grade Level" required="required">
                         </div>
                     </div>
@@ -450,18 +441,6 @@ $row =  $DnT->fetch_row();
         <p class="footer-txt">BS COMPUTER SCIENCE 3A © 2021</p>
     </div> -->
     <!--############################################################################################################################################################################################## -->
-    <!-- DATABLE SCRIPT -->
-    <script>
-    $(document).ready(function() {
-        $('#datatable').DataTable({
-            "lengthMenu": [
-                [10, 25, 50, -1],
-                [10, 25, 50, "All"]
-            ]
-        });
-        $("[data-toggle=tooltip]").tooltip();
-    });
-    </script>
     <!--############################################################################################################################################################################################## -->
     <!-- DELETE SCRIPT -->
     <script>
@@ -509,6 +488,48 @@ $row =  $DnT->fetch_row();
     });
     </script>
     <!--############################################################################################################################################################################################## -->
+<!--############################################################################################################################################################################################## -->
+<script type="text/javascript" language="javascript" >
+$(document).ready(function(){
+ load_data();
+
+ function load_data(lvl)
+ {
+  var dataTable = $('#datatable').DataTable({
+   "processing":true,
+   "serverSide":true,
+   "order":[],
+
+   "ajax":{
+    url:"sort_studAcc.php",
+    type:"POST",
+    data:{lvl:lvl}
+   },
+   "columnDefs":[
+    {
+     "targets":[6,8],
+     "orderable":false,
+
+    },
+   ],
+  });
+ }
+
+ $(document).on('change', '#lvl', function(){
+  var category = $(this).val();
+  $('#datatable').DataTable().destroy();
+  if(category != '')
+  {
+   load_data(category);
+  }
+  else
+  {
+   load_data();
+  }
+ });
+});
+</script>
+<!--################################################################################################################################################################### -->
 </body>
 
 </html>
