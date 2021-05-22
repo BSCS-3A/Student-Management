@@ -754,12 +754,13 @@ th {
     color: #EEEEEE;
     background-color: #18566e;
     text-align: center;
-    font-size: 12pt!important;
+    font-size: 10pt!important;
     letter-spacing: 2px!important;
+    font-weight: 700;
 }
 
 #tableth {
-    padding: 0.6%!important;
+    padding: 0.3%!important;
     padding-right: 15px!important;
 }
 
