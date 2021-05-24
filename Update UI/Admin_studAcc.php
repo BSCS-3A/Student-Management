@@ -47,7 +47,7 @@ $DTrow =  $DnT->fetch_row();
     <?php include "navAdmin.php"; ?>
 
     <div class="cheader">
-        <h3>STUDENT ACCOUNT MANAGEMENT</h3>
+        <h3 class="cheader-txt">STUDENT ACCOUNT MANAGEMENT</h3>
     </div>
 
 
@@ -112,7 +112,7 @@ $DTrow =  $DnT->fetch_row();
                     <table class="table-center" id="datatable" width="100%">
                         <thead>
                             <tr>
-                                <th class="min-mobile" id="tableth">STUDENT ID</th>
+                                <th class="min-mobile" id="tableh">STUDENT ID</th>
                                 <th class="min-mobile">LAST NAME</th>
                                 <th class="min-mobile">FIRST NAME</th>
                                 <th class="min-mobile">MIDDLE NAME</th>
@@ -173,15 +173,19 @@ $DTrow =  $DnT->fetch_row();
                                     placeholder="Enter Middle Name">
                             </div>
                             <div class="form-group">
-                                <input autocomplete="off" class="form-control " name="gender" id="gender" type="text"
+                                <select required onchange = "enableButton()" class="form-control " name="gender" id="gender" type="text"
                                     placeholder="Enter Gender" required="required">
+                                    <option value = "">Gender </option>
+                                    <option value = "female">Female</option>
+                                    <option value = "male">Male</option>
+                                </select>
                             </div>
                             <div class="form-group">
-                            <input  autocomplete="off" class="form-control " name="bumail" id="bumail" type="text"
+                            <input type="email"  pattern=".+@bicol-u.edu.ph"  autocomplete="off" class="form-control " name="bumail" id="bumail"
                                     placeholder="Enter Email" required="required">
                             </div>
                             <div class="form-group">
-                            <input autocomplete="off" class="form-control " name="grade_level" id="grade_level" type="text"
+                            <input type="number" min="7" max="12" autocomplete="off" class="form-control " name="grade_level" id="grade_level"
                                     placeholder="Enter Grade Level" required="required">
                             </div>
                         </div>
@@ -334,15 +338,19 @@ $DTrow =  $DnT->fetch_row();
                                 placeholder="Enter Middle Name">
                         </div>
                         <div class="form-group">
-                            <inputautocomplete="off" class="form-control " name="gender" id="egender" type="text"
+                            <select required onchange = "enableButton()" class="form-control " name="gender" id="egender" type="text"
                                 placeholder="Enter Gender" required="required">
+                                <option value = "">Gender </option>
+                                <option value = "female">Female</option>
+                                <option value = "male">Male</option>
+                            </select>
                         </div>
                         <div class="form-group">
-                            <input autocomplete="off" class="form-control " name="bumail" id="ebumail" type="text" placeholder="Enter Email"
+                            <input type="email"  pattern=".+@bicol-u.edu.ph" autocomplete="off" class="form-control " name="bumail" id="ebumail" placeholder="Enter Email"
                                 required="required">
                         </div>
                         <div class="form-group">
-                            <input autocomplete="off" class="form-control " name="grade_level" id="egrade_level" type="text"
+                            <input type="number" min="7" max="12" autocomplete="off" class="form-control " name="grade_level" id="egrade_level"
                                 placeholder="Enter Grade Level" required="required">
                         </div>
                     </div>
