@@ -705,6 +705,22 @@
     }
     /*------------messagebox----------*/
     
+    <!--Mesage-box> ::-webkit-scrollbar {
+        width: 5px!important;
+        height: 5px!important;
+    }
+    
+     ::-webkit-scrollbar-track {
+        width: 5px!important;
+        background: #f5f5f5!important;
+    }
+    
+     ::-webkit-scrollbar-thumb {
+        width: 1em!important;
+        background-color: #ddd!important;
+        border-radius: 25px!important;
+    }
+    
     @media only screen and (max-width: 768px) {
          ::-webkit-scrollbar {
             width: 5px!important;
