@@ -145,7 +145,7 @@ include("db_conn.php");
           <div class="input-group pr-5 pl-3 py-1" id="type">
           <input  type="text" id= "usermsg" placeholder="Type a message" aria-describedby="button-addon2" class="form-control rounded-0 border-0 py-4 pb-2 mt-1 bg-light">
             <div class="input-group-append">
-            <button id="button-addon2" type="submit" class="btn btn-link mr-0"> <i class="fa fa-paper-plane"></i></button>
+            <button id="button-addon2" type="submit" class="btn btn-link"> <i class="fa fa-paper-plane"></i></button>
             </div>
           </div>
         </form>
@@ -178,14 +178,14 @@ include("db_conn.php");
                           for(i = 0 ; i<res.length-1;i++){
                             var each = res[i].split("||");
                             if(each[0]==0){
-                              me +='<div class="media w-50 ml-auto mb-3" >';
+                              me +='<div class="media w-50 ml-auto mb-3" id="box">';
                               me += '<div class="media-body">';
                               me += '<div class="bg-primary rounded py-3 px-3 mb-2"id="receive">';
                               me += '<p class="text-small mb-0 text-white">'+each[1]+'</p></div>';
                               me += '<p class="small text-muted">'+each[2]+' '+each[3]+'</p></div></div>';
                             }
                             else if(each[0]==1){
-                              me += '<div class="media w-50 mb-3" alt="user" width="50" class="rounded-circle">';
+                              me += '<div class="media w-50 mb-3" alt="user" width="50" class="rounded-circle" id="box">';
                               me += '<div class="media-body ml-3">';
                               me += '<div class="bg-light rounded py-3 px-3 mb-2">';
                               me += '<p class="text-small mb-0 text-muted">'+each[1]+'</p></div>';
