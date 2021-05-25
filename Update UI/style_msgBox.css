@@ -126,7 +126,7 @@ div.container {
 }
 
 .text-small {
-    font-family: 'Roboto-regular', sans-serif;
+    font-family: 'Roboto-regular', sans-serif!important;
     font-size: 1.4rem;
 }
 
@@ -217,19 +217,19 @@ input::placeholder {
     font-size: 1.5rem!important;
     color: #999!important;
     position: relative!important;
-    font-family: 'Roboto-regular', sans-serif;
+    font-family: 'Roboto-regular', sans-serif!important;
 }
 
 .cname {
     font-weight: bold;
     font-size: 1.4 rem;
     margin-bottom: 0;
-    font-family: 'Roboto-regular', sans-serif;
+    font-family: 'Roboto-regular', sans-serif!important;
 }
 
 .cmessage {
     font-size: 1.4rem;
-    font-family: 'Roboto-regular', sans-serif;
+    font-family: 'Roboto-regular', sans-serif!important;
 }
 
 .sender {
