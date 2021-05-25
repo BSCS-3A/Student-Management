@@ -106,7 +106,8 @@ div.container {
     color: #124254!important;
     cursor: pointer!important;
     font-size: 17px!important;
-    margin-right: 15px!important;
+    margin-right: 3px!important;
+    margin-left: 1px!important;
     height: 33px!important;
     position: absolute!important;
     right: 0!important;
@@ -117,6 +118,9 @@ div.container {
 @media only screen and (max-width: 600px) {
     .btn-link {
         font-size: 15px!important;
+    }
+    #box {
+        width: 100%!important;
     }
 }
 
@@ -227,6 +231,11 @@ input::placeholder {
     font-family: 'Roboto-regular', sans-serif!important;
 }
 
+p {
+    word-break: break-word;
+    white-space: normal;
+}
+
 .cmessage {
     font-size: 1.4rem;
     font-family: 'Roboto-regular', sans-serif!important;
@@ -246,4 +255,5 @@ input::placeholder {
     left: 0;
     width: 100%;
     margin-bottom: 0!important;
+    z-index: 999!important;
 }
