@@ -96,6 +96,19 @@ include("db_conn.php");
             ?>
             <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
             <script type="text/javascript"> 
+
+            if(window.innerHeight < window.innerWidth){
+            $("#alert").fadeTo(0,0);
+            }
+            window.addEventListener("orientationchange", function() {
+            if(window.innerHeight > window.innerWidth){
+            $("#alert").fadeTo(0,0);
+            }
+            else if(window.innerHeight < window.innerWidth){
+            $("#alert").fadeTo(1,500);
+            }
+            }, false);
+            
            setInterval(function loading(){
             $.ajax({
             url : './backStudent/Admin_load.php',
@@ -132,7 +145,7 @@ include("db_conn.php");
           <div class="input-group pr-5 pl-3 py-1" id="type">
           <input  type="text" id= "usermsg" placeholder="Type a message" aria-describedby="button-addon2" class="form-control rounded-0 border-0 py-4 pb-2 mt-1 bg-light">
             <div class="input-group-append">
-            <button id="button-addon2" type="submit" class="btn btn-link"> <i class="fa fa-paper-plane"></i></button>
+            <button id="button-addon2" type="submit" class="btn btn-link mr-0"> <i class="fa fa-paper-plane"></i></button>
             </div>
           </div>
         </form>
