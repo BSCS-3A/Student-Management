@@ -86,12 +86,12 @@ $DTrow =  $DnT->fetch_row();
 
                 <!--Edited button to be disabled during the election-->
                 <button class="btn btn-button2" data-title="otp" data-toggle="modal" data-target="#otp"
-                    data-placement="top" data-toggle="tooltip" title="Generate OTP for this list" <?php 
+                    data-placement="top" data-toggle="tooltip" title="Generate Password for this list" <?php 
                     $now = date("Y-m-d G:i:s"); // G for 24hr format
                     if(isset($DTrow) && $now >= $DTrow[1] && $now <= $DTrow[2] ){
                     ?> disabled <?php    
                     }?>>
-                    <span class="fa fa-lock"></span> GENERATE OTP</button>
+                    <span class="fa fa-lock"></span> GENERATE PASSWORD</button>
                 <!--Edited button to be disabled during the election-->
 
 
@@ -112,7 +112,7 @@ $DTrow =  $DnT->fetch_row();
                     <table class="table-center" id="datatable" width="100%">
                         <thead>
                             <tr>
-                                <th class="min-mobile" id="tableh">STUDENT ID</th>
+                                <th class="min-mobile" id="tableh">STUDENT<br>ID</th>
                                 <th class="min-mobile">LAST NAME</th>
                                 <th class="min-mobile">FIRST NAME</th>
                                 <th class="min-mobile">MIDDLE NAME</th>
@@ -128,7 +128,7 @@ $DTrow =  $DnT->fetch_row();
                                     <option value="11">Grade 11</option>
                                     <option value="12">Grade 12</option></select>
                                 </th>
-                                <th class="min-mobile">OTP</th>
+                                <th class="min-mobile">PASSWORD</th>
                                 <th class="min-mobile">TOOLS</th>
 
                             </tr>
@@ -156,7 +156,7 @@ $DTrow =  $DnT->fetch_row();
                         </div>
                         <div class="modal-body">
                             <div class="form-group">
-                                <input autocomplete="off" class="form-control " name="Add_ID" type="text" placeholder="Enter Student ID"
+                                <input autocomplete="off" class="form-control " name="Add_ID" type="number" placeholder="Enter Student ID"
                                     required="required">
                             </div>
                             <div class="form-group">
@@ -211,22 +211,21 @@ $DTrow =  $DnT->fetch_row();
                     <h4 class="modal-title custom_align" id="Heading">Upload File</h4>
                 </div>
                 <div class="modal-body">
-                    <div class="alert alert-danger"><span class="fa fa-exclamation-triangle"></span> WARNING! <br> By
-                        uploading a new file, the existing student record will be replaced, and all student related
-                        data, such as results, list of candidates, and logs, will be deleted. <br><br><b>Select a new
-                            file (Only in CSV Format)</b></div>
+                    <div class="alert alert-danger">
+                        <span class="fa fa-exclamation-triangle"></span> WARNING! <br> 
+                            By uploading a new file, the existing student record will be replaced, and all student related
+                            data, such as results, list of candidates, and logs, will be deleted. <br>
+                            <br>
+                            <?php echo $message; ?>
+                    </div>
                 </div>
 
                 <div class="modal-footer ">
-
                     <!-- import button -->
                     <br />
                     <form method="POST" enctype="multipart/form-data">
                         <p><label></label></p>
                         <input type="file" name="info_file" />
-
-                        <?php //echo $message; ?>
-
                         <br />
                         <button type="submit" name="upload" class="btn btn-button6"><span
                                 class="fa fa-check-circle"></span> Upload</button>
@@ -244,8 +243,7 @@ $DTrow =  $DnT->fetch_row();
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    <h4 class="modal-title custom_align" id="Heading">Once you confirm, the system will generate one
-                        time password for this list. Do you wish to proceed?</h4>
+                    <h4 class="modal-title custom_align" id="Heading">Once you confirm, the system will generate password for this list. Do you wish to proceed?</h4>
                     <form method="POST">
                         <div class="modal-footer ">
 

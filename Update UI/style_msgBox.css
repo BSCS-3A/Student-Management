@@ -59,7 +59,7 @@ div.container {
 }
 
  ::-webkit-scrollbar {
-    width: 8px!important;
+    width: 12px!important;
     height: 5px!important;
 }
 

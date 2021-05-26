@@ -247,7 +247,26 @@ iframe {
     margin-top: 2px;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 320px) {
+    .btn-button0 {
+        margin: 25px 5px 5px 0px!important;
+    }
+    .btn-button1 {
+        margin: 25px 50px 5px 0px!important;
+    }
+    .btn-button2 {
+        margin: 0px 50px 5px 0px!important;
+    }
+    .btn-button3 {
+        margin: 0px 0px 20px 0px!important;
+    }
+    .btn-button4 {
+        width: 35% !important;
+        margin: 20px 15px 10px 0px!important;
+    }
+}
+
+@media screen and (min-width: 325px) and (max-width: 500px) {
     .btn-button0 {
         margin: 25px 5px 5px 0px!important;
     }
@@ -476,8 +495,9 @@ th {
 }
 
 #tableh {
-    padding: 10px!important;
-    padding-right: 12px!important;
+    padding: 2px!important;
+    padding-right: 10px!important;
+    padding-left: 10px!important;
 }
 
 #tableh2 {
